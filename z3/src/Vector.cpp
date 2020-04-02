@@ -6,29 +6,56 @@
  *  niz dwie linijki.
  *  Mniejsze metody mozna definiwac w ciele klasy.
  */
-double Vector::getCell(unsigned int col) const
+
+/*
+ * Metoda interfejsu klasy Vector, daje mozliwosc odczytu komorki wektora.
+ * Argumety:
+ *          row - wiersz wektora (0 odnosi sie do 1 wierszu).
+ * Warunki wstepne:
+ *          row nie moze byc wieksze niz stopien wektora - 1.
+ * Zwraca:
+ *          Wartosc komorki wektora.
+ */
+double Vector::getCell(unsigned int row) const
 {
-  if(col < SIZE)
-    return this->_v[col];
+  if(row < SIZE)
+    return this->_v[row];
   else
     return 0;
 }
 
-int Vector::writeCell(unsigned int col, const double &value)
+/*
+ * Metoda interfejsu klasy Vector, daje mozliwosc odczytu komorki wektora.
+ * Argumety:
+ *          row - wiersz wektora (0 odnosi sie do 1 wierszu),
+ *          value - wartosc do przypisania do komorki.
+ * Warunki wstepne:
+ *          row nie moze byc wieksze niz stopien wektora - 1.
+ * Zwraca:
+ *          1 jesli podano dobre row, 0 w przeciwnym przypadku.
+ */
+int Vector::writeCell(unsigned int row, const double &value)
 {
-  if(col < SIZE)
-    this->_v[col] = value;
+  if(row < SIZE)
+    this->_v[row] = value;
   else
     return 0;
   return 1;
 }
 
+/*
+ * Konstrukor klasy Vector, inicjalizuje ja zerami.
+ */
 Vector::Vector()
 {
   for(int i = 0; i < SIZE; i++)
     _v[i] = 0;
 }
 
+/*
+ * Przeciazenie operatora >> dla klasy Vector
+ * 
+ */
 std::istream &operator>>(std::istream &stream, Vector &vec)
 {
   double tmp[SIZE];
@@ -42,6 +69,10 @@ std::istream &operator>>(std::istream &stream, Vector &vec)
   return stream;
 }
 
+/*
+ * Przeciazenie operatora << dla klasy Vector
+ * 
+ */
 std::ostream &operator<<(std::ostream &stream, const Vector &vec)
 {
   for(int i = 0; i < SIZE; i++)
@@ -50,6 +81,10 @@ std::ostream &operator<<(std::ostream &stream, const Vector &vec)
   return stream;
 }
 
+/*
+ * Przeciazenie operatora + dla klasy Vector
+ * 
+ */
 Vector operator + (const Vector &vec1, const Vector &vec2)
 {
   Vector result;
@@ -59,6 +94,10 @@ Vector operator + (const Vector &vec1, const Vector &vec2)
   return result;
 }
 
+/*
+ * Przeciazenie operatora - dla klasy Vector
+ * 
+ */
 Vector operator - (const Vector &vec1, const Vector &vec2)
 {
   Vector result;
@@ -68,6 +107,10 @@ Vector operator - (const Vector &vec1, const Vector &vec2)
   return result;
 }
 
+/*
+ * Przeciazenie operatora & dla klasy Vector. Realizuje mnozenie skalarne.
+ * 
+ */
 double operator & (const Vector &vec1, const Vector &vec2)
 {
   double result = 0;
@@ -77,6 +120,10 @@ double operator & (const Vector &vec1, const Vector &vec2)
   return result;
 }
 
+/*
+ * Przeciazenie operatora * dla klasy Vector
+ * 
+ */
 Vector operator * (const Vector &vec, double val)
 {
   Vector result;
@@ -86,6 +133,10 @@ Vector operator * (const Vector &vec, double val)
   return result;
 }
 
+/*
+ * Przeciazenie operatora / dla klasy Vector
+ * 
+ */
 Vector operator / (const Vector &vec, double val)
 {
   Vector result;

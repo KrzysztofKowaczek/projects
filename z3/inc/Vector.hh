@@ -17,8 +17,8 @@ public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
-  double getCell(unsigned int col) const;
-  int writeCell(unsigned int col, const double &value);
+  double getCell(unsigned int row) const;
+  int writeCell(unsigned int row, const double &value);
   Vector();
 };
 

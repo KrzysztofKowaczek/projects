@@ -19,6 +19,7 @@ public:
    */
   double getCell(unsigned int row, unsigned int col) const;
   int writeCell(unsigned int row, unsigned int col, const double &value);
+  double determinant() const;
   Matrix();
 };
 
