@@ -12,10 +12,14 @@ class Matrix
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
+  double _m[SIZE][SIZE];
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
+  double getCell(unsigned int row, unsigned int col) const;
+  int writeCell(unsigned int row, unsigned int col, const double &value);
+  Matrix();
 };
 
 /*
@@ -25,7 +29,7 @@ public:
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::istream &operator>>(std::istream &stream, Matrix &matrix);
+std::istream &operator>>(std::istream &stream, const Matrix &matrix);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
