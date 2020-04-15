@@ -75,6 +75,7 @@ std::istream &operator>>(std::istream &stream, Vector &vec)
  */
 std::ostream &operator<<(std::ostream &stream, const Vector &vec)
 {
+  stream << "\t";
   for(int i = 0; i < SIZE; i++)
     stream << vec.getCell(i) << " ";
   return stream;

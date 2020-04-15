@@ -34,7 +34,6 @@ public:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
 std::istream &operator>>(std::istream &stream, Vector &vec);
-
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
  * danych akceptuje. Jakie jest znaczenie parametrow itd.

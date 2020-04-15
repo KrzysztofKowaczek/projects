@@ -4,7 +4,7 @@
 CPPFLAGS= -c -g -Iinc -Wall -pedantic
 
 __start__: system_of_equations
-	./system_of_equations
+	./system_of_equations < matrix.dat
 
 system_of_equations: obj/main.o obj/SystemOfLinearEquations.o obj/Matrix.o obj/Vector.o
 	g++ -Wall -pedantic -o system_of_equations obj/main.o obj/Vector.o\

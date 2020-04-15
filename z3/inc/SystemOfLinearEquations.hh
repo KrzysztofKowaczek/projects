@@ -1,6 +1,8 @@
 #pragma once
 
 #include <iostream>
+#include "Vector.hh"
+#include "Matrix.hh"
 
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
@@ -11,6 +13,8 @@ class SystemOfLinearEquations
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
+  Matrix _m;
+  Vector _v;
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych

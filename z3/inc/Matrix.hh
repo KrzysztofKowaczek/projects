@@ -14,12 +14,14 @@ class Matrix
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
   Vector _m[SIZE];
+  bool checkIfZeroDiagonal(Vector *m, int &place) const;
+  void replaceRows(Vector *m, int row1, int row2) const;
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
   Vector getVector(unsigned int ind) const;
-  int setVector(unsigned int ind, const Vector &vector);
+  bool setVector(unsigned int ind, const Vector &vector);
   double determinant() const;
   Matrix();
 };

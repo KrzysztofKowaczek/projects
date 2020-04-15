@@ -16,11 +16,18 @@ int main()
 {
   SystemOfLinearEquations system; // To tylko przykladowe definicje zmiennej
   Matrix m;
+  Vector v;
 
   cout << endl
        << " Start programu " << endl
        << endl;
-
+  
   cin >> m;
-  cout << m;
+  cin >> v;
+
+  cout << "Macierz A^T:" << endl << endl;
+  cout << m << endl;
+  cout << "Wektor wyrazow wolnych b:" << endl << endl;
+  cout << v << endl << endl;
+  m.determinant();
 }
