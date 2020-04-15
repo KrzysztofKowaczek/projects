@@ -1,4 +1,5 @@
 #include "Matrix.hh"
+#include "Vector.hh"
 #include "Size.hh"
 /*
  *  Tutaj nalezy zdefiniowac odpowiednie metody
@@ -13,33 +14,33 @@
  *          row - wiersz macierzy (0 odnosi sie do 1 wierszu),
  *          col - kolumna macierzy (0 odnosi sie do 1 kolumny).
  * Warunki wstepne:
- *          row i col nie moga byc wieksze niz stopien macierzy - 1.
+ *          ind nie moga byc wieksze niz stopien macierzy - 1.
  * Zwraca:
  *          Wartosc komorki macierzy.
  */
-double Matrix::getCell(unsigned int row, unsigned int col) const
+Vector Matrix::getVector(unsigned int ind) const
 {
-  if(row < SIZE && col < SIZE)
-    return this->_m[row][col];
-  else
-    return 0;
+  if(ind < SIZE)
+    return this->_m[ind];
+  
+  Vector v;
+  return v;
 }
 
 /*
- * Metoda interfejsu Matrix, daje mozliwosc zapisu do komorki macierzy
+ * Metoda interfejsu Matrix, daje mozliwosc zapisu do wektora macierzy
  * Argumety:
- *          row - wiersz macierzy (0 odnosi sie do 1 wierszu),
- *          col - kolumna macierzy (0 odnosi sie do 1 kolumny),
+ *          ind - indeks wektora macierzy (0 odnosi sie do 1 wektora),
  *          value - wartosc do przypisania do komorki
  * Warunki wstepne:
- *          row i col nie moga byc wieksze niz stopien macierzy - 1.
+ *          ind nie moze byc wieksze niz stopien macierzy - 1.
  * Zwraca:
- *          1 jesli podano dobre row i col, 0 w przeciwnym przypadku.
+ *          1 jesli podano dobry ind, 0 w przeciwnym przypadku.
  */
-int Matrix::writeCell(unsigned int row, unsigned int col, const double &value)
+int Matrix::setVector(unsigned int ind, const Vector &vector)
 {
-  if(row < SIZE && col < SIZE)
-    this->_m[row][col] = value;
+  if(ind < SIZE)
+    this->_m[ind] = vector;
   else
     return 0;
   return 1;
@@ -50,9 +51,9 @@ int Matrix::writeCell(unsigned int row, unsigned int col, const double &value)
  */
 Matrix::Matrix()
 {
+  Vector v;
   for(int i = 0; i < SIZE; i++)
-    for(int j = 0; j < SIZE; j++)
-      _m[i][j] = 0;
+    this->_m[i] = v;
 }
 
 /*
@@ -65,11 +66,24 @@ Matrix::Matrix()
  */
 std::ostream &operator<<(std::ostream &stream, const Matrix &matrix)
 {
- for(int i = 1; i < SIZE + 1; i++)
- {
-    for(int j = 1; j < SIZE + 1; j++)
-      stream << matrix.getCell(i, j) << " ";
-    stream << std::endl;
- }
+  for(int i = 0; i < SIZE; i++)
+    stream << matrix.getVector(i) << std::endl;
+
+  return stream;
+}
+
+std::istream &operator>>(std::istream &stream, Matrix &matrix)
+{
+  double val;
+  Vector vect;
+  for(int i = 0; i < SIZE; i++)
+  {
+    for(int j = 0; j < SIZE; j++)
+    {
+      stream >> val;
+      vect.setCell(j, val);
+    }
+    matrix.setVector(i, vect);
+  }
   return stream;
 }

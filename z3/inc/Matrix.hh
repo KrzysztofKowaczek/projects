@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Size.hh"
+#include "Vector.hh"
 #include <iostream>
 
 /*
@@ -12,13 +13,13 @@ class Matrix
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-  double _m[SIZE][SIZE];
+  Vector _m[SIZE];
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
-  double getCell(unsigned int row, unsigned int col) const;
-  int writeCell(unsigned int row, unsigned int col, const double &value);
+  Vector getVector(unsigned int ind) const;
+  int setVector(unsigned int ind, const Vector &vector);
   double determinant() const;
   Matrix();
 };
@@ -30,7 +31,7 @@ public:
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::istream &operator>>(std::istream &stream, const Matrix &matrix);
+std::istream &operator>>(std::istream &stream, Matrix &matrix);
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format

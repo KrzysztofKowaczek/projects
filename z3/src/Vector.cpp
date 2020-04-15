@@ -34,7 +34,7 @@ double Vector::getCell(unsigned int row) const
  * Zwraca:
  *          1 jesli podano dobre row, 0 w przeciwnym przypadku.
  */
-int Vector::writeCell(unsigned int row, const double &value)
+int Vector::setCell(unsigned int row, const double &value)
 {
   if(row < SIZE)
     this->_v[row] = value;
@@ -64,7 +64,7 @@ std::istream &operator>>(std::istream &stream, Vector &vec)
   if(!stream.fail())
   {
     for(int i = 0; i < SIZE; i++)
-      vec.writeCell(i, tmp[i]);
+      vec.setCell(i, tmp[i]);
   }
   return stream;
 }
@@ -77,7 +77,6 @@ std::ostream &operator<<(std::ostream &stream, const Vector &vec)
 {
   for(int i = 0; i < SIZE; i++)
     stream << vec.getCell(i) << " ";
-  stream << std::endl;
   return stream;
 }
 
@@ -89,7 +88,7 @@ Vector operator + (const Vector &vec1, const Vector &vec2)
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.writeCell(i, vec1.getCell(i) + vec2.getCell(i));
+    result.setCell(i, vec1.getCell(i) + vec2.getCell(i));
 
   return result;
 }
@@ -102,7 +101,7 @@ Vector operator - (const Vector &vec1, const Vector &vec2)
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.writeCell(i, vec1.getCell(i) - vec2.getCell(i));
+    result.setCell(i, vec1.getCell(i) - vec2.getCell(i));
 
   return result;
 }
@@ -128,7 +127,7 @@ Vector operator * (const Vector &vec, double val)
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.writeCell(i, vec.getCell(i) * val);
+    result.setCell(i, vec.getCell(i) * val);
   
   return result;
 }
@@ -143,7 +142,32 @@ Vector operator / (const Vector &vec, double val)
   if(val == 0)
     return result;
   for(int i = 0; i < SIZE; i++)
-    result.writeCell(i, vec.getCell(i) / val);
+    result.setCell(i, vec.getCell(i) / val);
   
   return result;
+}
+
+void Vector::operator+=(const Vector &vec)
+{
+  for(int i = 0; i < SIZE; i++)
+    this->_v[i] += vec.getCell(i);
+}
+
+void Vector::operator-=(const Vector &vec)
+{
+  for(int i = 0; i < SIZE; i++)
+    this->_v[i] -= vec.getCell(i);
+}
+
+void Vector::operator*=(double val)
+{
+  for(int i = 0; i < SIZE; i++)
+    this->_v[i] *= val;
+}
+
+void Vector::operator/=(double val)
+{
+  if(val != 0)
+    for(int i = 0; i < SIZE; i++)
+      this->_v[i] /= val;
 }

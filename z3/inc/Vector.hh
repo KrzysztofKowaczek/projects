@@ -17,8 +17,12 @@ public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
+  void operator += (const Vector &vec);
+  void operator -= (const Vector &vec);
+  void operator *= (double val);
+  void operator /= (double val);
   double getCell(unsigned int row) const;
-  int writeCell(unsigned int row, const double &value);
+  int setCell(unsigned int row, const double &value);
   Vector();
 };
 

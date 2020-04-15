@@ -15,9 +15,12 @@ using namespace std;
 int main()
 {
   SystemOfLinearEquations system; // To tylko przykladowe definicje zmiennej
+  Matrix m;
 
   cout << endl
        << " Start programu " << endl
        << endl;
-  
+
+  cin >> m;
+  cout << m;
 }
