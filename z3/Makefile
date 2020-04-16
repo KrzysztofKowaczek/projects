@@ -17,11 +17,11 @@ obj/main.o: src/main.cpp inc/SystemOfLinearEquations.hh inc/Matrix.hh inc/Vector
 obj/SystemOfLinearEquations.o: src/SystemOfLinearEquations.cpp inc/SystemOfLinearEquations.hh
 	g++ ${CPPFLAGS} -o obj/SystemOfLinearEquations.o src/SystemOfLinearEquations.cpp
 
-obj/Matrix.o: src/Matrix.cpp inc/Matrix.hh 
+obj/Matrix.o: src/Matrix.cpp inc/Matrix.hh  inc/Size.hh
 	g++ ${CPPFLAGS} -o obj/Matrix.o src/Matrix.cpp
 
 obj/Vector.o: src/Vector.cpp inc/Vector.hh inc/Size.hh
-	g++ ${CPPFLAGS} -o obj/Vector.o src/Vector.cpp
+	g++ ${CPPFLAGS} -o obj/Vector.o src/Vector.cpp 
 
 clean:
 	rm -f obj/*.o system_of_equations

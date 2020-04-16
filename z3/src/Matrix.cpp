@@ -61,7 +61,7 @@ double Matrix::determinant() const
     int bitmap = 0;
     for(int i = 0; i < SIZE; i++)
       // Oznacz niezerowe komorki w kolumnie
-      if(abs(m[place].getCell(i)) < 0.0000001)
+      if(abs(m[i].getCell(place)) > 0.0000001)
         bitmap |= (1 << i); 
 
     if(bitmap == 0) // Jesli kolumna zawiera same zera 
@@ -108,13 +108,12 @@ void Matrix::eliminationMethodGauss(Vector *m)
   int row, col;
   double quotient;
   for(col = 0; col < SIZE; col++)
-    for(row = SIZE; row != col; --row)
+    for(row = SIZE - 1; row > col; row--)
     {
-      if(abs(m[col].getCell(row)) > 0.0000001)
+      if(abs(m[row].getCell(col)) > 0.0000001)
       {
-        quotient = m[col].getCell(row) / m[col].getCell(col);
-        for(int j = 0; j < SIZE; j++)
-          m[j].setCell(row, (m[j].getCell(row) - (m[j].getCell(col) * quotient)));
+        quotient = m[row].getCell(col) / m[col].getCell(col);
+        m[row] -= m[col] * quotient;
       }
     }
 }
