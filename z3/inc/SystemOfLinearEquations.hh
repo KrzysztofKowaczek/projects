@@ -15,10 +15,19 @@ class SystemOfLinearEquations
    */
   Matrix _m;
   Vector _v;
+  Vector _result;
+	Vector _slip;
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
+  Vector calculate();
+  Matrix getMatrix() const {return this->_m;}
+  void setMatrix(const Matrix &matrix) {this->_m = matrix;}
+  Vector getVector() const {return this->_v;}
+  void setVector(const Vector &vector) {this->_v = vector;}
+	Vector getResult() const {return this->_result;}
+	Vector getSlip() const {return this->_slip;}
 };
 
 /*

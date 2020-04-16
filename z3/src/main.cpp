@@ -15,19 +15,12 @@ using namespace std;
 int main()
 {
   SystemOfLinearEquations system; // To tylko przykladowe definicje zmiennej
-  Matrix m;
-  Vector v;
 
   cout << endl
        << " Start programu " << endl
        << endl;
   
-  cin >> m;
-  cin >> v;
-
-  cout << "Macierz A^T:" << endl << endl;
-  cout << m << endl;
-  cout << "Wektor wyrazow wolnych b:" << endl << endl;
-  cout << v << endl << endl;
-  cout << "Wyznacznik macierzy: " << m.determinant() << endl;
+  cin >> system;
+  system.calculate();
+  cout << system;
 }
