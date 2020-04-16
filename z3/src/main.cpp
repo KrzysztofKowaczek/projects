@@ -29,5 +29,5 @@ int main()
   cout << m << endl;
   cout << "Wektor wyrazow wolnych b:" << endl << endl;
   cout << v << endl << endl;
-  m.determinant();
+  cout << "Wyznacznik macierzy: " << m.determinant() << endl;
 }

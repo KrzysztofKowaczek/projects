@@ -49,34 +49,39 @@ bool Matrix::setVector(unsigned int ind, const Vector &vector)
 double Matrix::determinant() const
 {
   Vector m[SIZE]; // Kopia macierzy, na niej wykonywane są wszystkie operacje
-  int row, col, rowChanges = 0, place;
+  int rowChanges = 0, place;
+  double det = 1;
   for(int i = 0; i < SIZE; i++)
     m[i] = this->_m[i];
   
   while(checkIfZeroDiagonal(m, place))
   {
-    int bitmap = 0, rowChanged = 0;
+    int bitmap = 0;
     for(int i = 0; i < SIZE; i++)
-    {
       // Oznacz niezerowe komorki w kolumnie
       if(this->_m[place].getCell(i) != 0)
         bitmap |= (1 << i); 
-    }
+
     if(bitmap == 0) // Jesli kolumna zawiera same zera 
       return 0;
 
     for(int i = 0; i < SIZE; i++)
-      if(bitmap & (1 << i) && !rowChanged) // Sprawdz ktory jest pierwszy niezerowy
+      if(bitmap & (1 << i)) // Sprawdz ktory jest pierwszy niezerowy
       {
         replaceRows(m, place, i); // Zamien wiersz niezerowy z zerowym
-        rowChanged = 1;
+        i = SIZE; // Zatrzymuje petle
       }
     rowChanges++;
-    std::cout << m[0] << m[1] << m[2] << std::endl;
   }
+  eliminationMethodGauss(m);
+  for(int i = 0; i < SIZE; i++) 
+    det *= m[i].getCell(i);
+  // Uwzglednienie liczby przestawien wierszy
+  if(rowChanges % 2) det *= -1;
+  return det;
 }
 
-bool Matrix::checkIfZeroDiagonal(Vector *m, int &place) const
+bool Matrix::checkIfZeroDiagonal(Vector *m, int &place)
 {
   bool result = false;
   for(int i = 0; i < SIZE; i++)
@@ -95,6 +100,22 @@ void Matrix::replaceRows(Vector *m, int row1, int row2) const
     m[i].setCell(row1, this->_m[i].getCell(row2));
     m[i].setCell(row2, this->_m[i].getCell(row1));
   }
+}
+
+void Matrix::eliminationMethodGauss(Vector *m)
+{
+  int row, col;
+  double quotient;
+  for(col = 0; col < SIZE; col++)
+    for(row = SIZE; row != col; --row)
+    {
+      if(m[col].getCell(row) != 0)
+      {
+        quotient = m[col].getCell(row) / m[col].getCell(col);
+        for(int j = 0; j < SIZE; j++)
+          m[j].setCell(row, (m[j].getCell(row) - (m[j].getCell(col) * quotient)));
+      }
+    }
 }
 
 /*

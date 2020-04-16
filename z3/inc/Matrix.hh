@@ -14,8 +14,9 @@ class Matrix
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
   Vector _m[SIZE];
-  bool checkIfZeroDiagonal(Vector *m, int &place) const;
+  static bool checkIfZeroDiagonal(Vector *m, int &place);
   void replaceRows(Vector *m, int row1, int row2) const;
+  static void eliminationMethodGauss(Vector *m);
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
