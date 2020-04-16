@@ -19,8 +19,13 @@ public:
    */
   void operator += (const Vector &vec);
   void operator -= (const Vector &vec);
-  void operator *= (double val);
-  void operator /= (double val);
+  void operator *= (const double val);
+  void operator /= (const double val);
+  Vector operator + (const Vector &vec2) const;
+  Vector operator - (const Vector &vec2) const;
+  double operator & (const Vector &vec2) const;
+  Vector operator * (double val) const;
+  Vector operator / (double val) const;
   double getCell(unsigned int row) const;
   int setCell(unsigned int row, const double &value);
   Vector();
@@ -42,9 +47,3 @@ std::istream &operator>>(std::istream &stream, Vector &vec);
  *    ~bk/edu/kpo/zalecenia.txt 
  */
 std::ostream &operator<<(std::ostream &stream, const Vector &vec);
-
-Vector operator + (const Vector &vec1, const Vector &vec2);
-Vector operator - (const Vector &vec1, const Vector &vec2);
-double operator & (const Vector &vec1, const Vector &vec2);
-Vector operator * (const Vector &vec, double val);
-Vector operator / (const Vector &vec, double val);

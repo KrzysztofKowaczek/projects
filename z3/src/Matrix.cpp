@@ -1,6 +1,7 @@
 #include "Matrix.hh"
 #include "Vector.hh"
 #include "Size.hh"
+#include "math.h"
 /*
  *  Tutaj nalezy zdefiniowac odpowiednie metody
  *  klasy Matrix, ktore zawieraja wiecej kodu
@@ -52,14 +53,15 @@ double Matrix::determinant() const
   int rowChanges = 0, place;
   double det = 1;
   for(int i = 0; i < SIZE; i++)
-    m[i] = this->_m[i];
+    for(int j = 0; j < SIZE; j++)
+      m[i].setCell(j, this->_m[j].getCell(i)); // Transponowanie macierzy
   
   while(checkIfZeroDiagonal(m, place))
   {
     int bitmap = 0;
     for(int i = 0; i < SIZE; i++)
       // Oznacz niezerowe komorki w kolumnie
-      if(this->_m[place].getCell(i) != 0)
+      if(abs(m[place].getCell(i)) < 0.0000001)
         bitmap |= (1 << i); 
 
     if(bitmap == 0) // Jesli kolumna zawiera same zera 
@@ -85,7 +87,7 @@ bool Matrix::checkIfZeroDiagonal(Vector *m, int &place)
 {
   bool result = false;
   for(int i = 0; i < SIZE; i++)
-    if(m[i].getCell(i) == 0)
+    if(abs(m[i].getCell(i)) < 0.0000001)
     {
       result = true;
       place = i;
@@ -95,11 +97,10 @@ bool Matrix::checkIfZeroDiagonal(Vector *m, int &place)
 
 void Matrix::replaceRows(Vector *m, int row1, int row2) const
 {
-  for(int i = 0; i < SIZE; i++)
-  {
-    m[i].setCell(row1, this->_m[i].getCell(row2));
-    m[i].setCell(row2, this->_m[i].getCell(row1));
-  }
+  Vector tmpV;
+  tmpV = m[row1];
+  m[row1] = m[row2];
+  m[row2] = tmpV;
 }
 
 void Matrix::eliminationMethodGauss(Vector *m)
@@ -109,7 +110,7 @@ void Matrix::eliminationMethodGauss(Vector *m)
   for(col = 0; col < SIZE; col++)
     for(row = SIZE; row != col; --row)
     {
-      if(m[col].getCell(row) != 0)
+      if(abs(m[col].getCell(row)) > 0.0000001)
       {
         quotient = m[col].getCell(row) / m[col].getCell(col);
         for(int j = 0; j < SIZE; j++)
@@ -154,15 +155,10 @@ std::ostream &operator<<(std::ostream &stream, const Matrix &matrix)
  */
 std::istream &operator>>(std::istream &stream, Matrix &matrix)
 {
-  double val;
   Vector vect;
   for(int i = 0; i < SIZE; i++)
   {
-    for(int j = 0; j < SIZE; j++)
-    {
-      stream >> val;
-      vect.setCell(j, val);
-    }
+    stream >> vect;
     matrix.setVector(i, vect);
   }
   return stream;

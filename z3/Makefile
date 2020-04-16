@@ -11,7 +11,7 @@ system_of_equations: obj/main.o obj/SystemOfLinearEquations.o obj/Matrix.o obj/V
                                    obj/Matrix.o obj/SystemOfLinearEquations.o
 
 obj/main.o: src/main.cpp inc/SystemOfLinearEquations.hh inc/Matrix.hh inc/Vector.hh\
-        inc/Size.hh
+        inc/Size.hh inc/Vector.hh inc/Matrix.hh
 	g++ ${CPPFLAGS} -o obj/main.o src/main.cpp
 
 obj/SystemOfLinearEquations.o: src/SystemOfLinearEquations.cpp inc/SystemOfLinearEquations.hh

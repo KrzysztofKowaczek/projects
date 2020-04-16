@@ -1,5 +1,5 @@
 #include "Vector.hh"
-
+#include "math.h"
 /*
  *  Tutaj nalezy zdefiniowac odpowiednie metody
  *  klasy Vector, ktore zawieraja wiecej kodu
@@ -85,11 +85,11 @@ std::ostream &operator<<(std::ostream &stream, const Vector &vec)
  * Przeciazenie operatora + dla klasy Vector
  * 
  */
-Vector operator + (const Vector &vec1, const Vector &vec2)
+Vector Vector::operator + (const Vector &vec) const
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.setCell(i, vec1.getCell(i) + vec2.getCell(i));
+    result.setCell(i, this->_v[i] - vec.getCell(i));
 
   return result;
 }
@@ -98,11 +98,11 @@ Vector operator + (const Vector &vec1, const Vector &vec2)
  * Przeciazenie operatora - dla klasy Vector
  * 
  */
-Vector operator - (const Vector &vec1, const Vector &vec2)
+Vector Vector::operator - (const Vector &vec) const
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.setCell(i, vec1.getCell(i) - vec2.getCell(i));
+    result.setCell(i, this->_v[i] - vec.getCell(i));
 
   return result;
 }
@@ -111,11 +111,11 @@ Vector operator - (const Vector &vec1, const Vector &vec2)
  * Przeciazenie operatora & dla klasy Vector. Realizuje mnozenie skalarne.
  * 
  */
-double operator & (const Vector &vec1, const Vector &vec2)
+double Vector::operator & (const Vector &vec) const
 {
   double result = 0;
   for(int i = 0; i < SIZE; i++)
-    result += vec1.getCell(i) * vec2.getCell(i);
+    result += this->_v[i] * vec.getCell(i);
   
   return result;
 }
@@ -124,11 +124,11 @@ double operator & (const Vector &vec1, const Vector &vec2)
  * Przeciazenie operatora * dla klasy Vector
  * 
  */
-Vector operator * (const Vector &vec, double val)
+Vector Vector::operator * (double val) const
 {
   Vector result;
   for(int i = 0; i < SIZE; i++)
-    result.setCell(i, vec.getCell(i) * val);
+    result.setCell(i, this->_v[i] * val);
   
   return result;
 }
@@ -137,13 +137,13 @@ Vector operator * (const Vector &vec, double val)
  * Przeciazenie operatora / dla klasy Vector
  * 
  */
-Vector operator / (const Vector &vec, double val)
+Vector Vector::operator / (double val) const
 {
   Vector result;
-  if(val == 0)
+  if(abs(val) < 0.0000001)
     return result;
   for(int i = 0; i < SIZE; i++)
-    result.setCell(i, vec.getCell(i) / val);
+    result.setCell(i, this->_v[i] / val);
   
   return result;
 }

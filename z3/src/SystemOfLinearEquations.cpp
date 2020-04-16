@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Size.hh"
 #include <math.h>
+#include "Vector.hh"
+#include "Matrix.hh"
 
 /*
  *  Tutaj nalezy zdefiniowac odpowiednie metody
@@ -28,17 +30,22 @@ std::ostream &operator<<(std::ostream &stream,
   stream << system.getMatrix() << std::endl;
   stream << "Wektor wyrazow wolnych b:" << std::endl << std::endl;
   stream << system.getVector() << std::endl << std::endl;
-	stream << "Rozwiazanie x = (x1";
-	for(int i = 0; i < SIZE - 1; i++)
-		stream << ", x" << i + 2;
-	stream << "):" << std::endl << std::endl;
-	stream << system.getResult() << std::endl << std::endl;
-	stream << "         Wektor bledu:    Ax-b = ( " << slip.getCell(0);
-	for(int i = 1; i < SIZE; i++)
-		stream << ", " << slip.getCell(i);
-	stream << " )" << std::endl;
-	stream << "Dlugosc wektora bledu: |(Ax-b)| = " << sqrt(slip & slip)
-				 << std::endl << std::endl;
+	if(system.isCalculated())
+	{
+		stream << "Rozwiazanie x = (x1";
+		for(int i = 0; i < SIZE - 1; i++)
+			stream << ", x" << i + 2;
+		stream << "):" << std::endl << std::endl;
+		stream << system.getResult() << std::endl << std::endl;
+		stream << "         Wektor bledu:   Ax-b   = ( " << slip.getCell(0);
+		for(int i = 1; i < SIZE; i++)
+			stream << ", " << slip.getCell(i);
+		stream << " )" << std::endl;
+		stream << "Dlugosc wektora bledu: |(Ax-b)| = " << sqrt(slip & slip)
+					<< std::endl << std::endl;
+	}
+	else
+		stream << "Nie policzono rownania!" << std::endl << std::endl;
 	return stream;
 }
 
@@ -68,6 +75,8 @@ Vector SystemOfLinearEquations::calculate()
 		}
 		this->_slip.setCell(i, (this->_v.getCell(i) - tmp));
 	}
+
+	this->calculated = true;
 
 	return this->_result;
 }

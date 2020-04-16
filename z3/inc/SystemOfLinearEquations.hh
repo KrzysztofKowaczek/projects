@@ -17,6 +17,7 @@ class SystemOfLinearEquations
   Vector _v;
   Vector _result;
 	Vector _slip;
+	bool calculated;
 public:
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
@@ -28,6 +29,7 @@ public:
   void setVector(const Vector &vector) {this->_v = vector;}
 	Vector getResult() const {return this->_result;}
 	Vector getSlip() const {return this->_slip;}
+	bool isCalculated() const {return calculated;}
 };
 
 /*
