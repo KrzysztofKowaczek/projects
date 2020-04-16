@@ -6,12 +6,14 @@
 #include "Matrix.hh"
 
 /*
- *  Tutaj nalezy zdefiniowac odpowiednie metody
- *  klasy SystemOfLinearEquations, ktore zawieraja 
- *  wiecej kodu niz dwie linijki.
- *  Mniejsze metody mozna definiwac w ciele klasy.
+ * Przeciazenie operatora >> dla wczytania ukladu rownan
+ * Uwaga:
+ * 					przyjmuje tylko takie dane jak w pliku matrix.dat, czyli np.:
+ * 					1.0 2.2 3.1
+ * 					4.1 5.2 6.3
+ * 					7.7 8.7 9.45
+ *          0.2 2.3 3.4
  */
-
 std::istream &operator>>(std::istream &stream, SystemOfLinearEquations &system)
 {
     Matrix m;
@@ -22,6 +24,17 @@ std::istream &operator>>(std::istream &stream, SystemOfLinearEquations &system)
     return stream; 
 }
 
+/*
+ * Przeciazenie operatora << dla wypisywania ukladu rownan.
+ * Argumenty:
+ *           stream - strumien wyjscia,
+ *           system - uklad rownan do wypisania.
+ * Zwraca:
+ *           referencje na strumien wyjsciowy.
+ * Uwaga:
+ * 					 wypisuje rozne postaci w zaleznosci czy uklad zostal juz 
+ * 					 policzony, czy nie.
+ */
 std::ostream &operator<<(std::ostream &stream,
                          const SystemOfLinearEquations &system)
 {
@@ -49,6 +62,11 @@ std::ostream &operator<<(std::ostream &stream,
 	return stream;
 }
 
+/*
+ * Metoda klasy SystemOfLinearEquations, oblicza uklad rownan.
+ * Zwraca:
+ * 					wektor bedacy rozwiazaniem ukladu rownan.
+ */
 Vector SystemOfLinearEquations::calculate()
 {
 	Vector tmpV;

@@ -47,6 +47,11 @@ bool Matrix::setVector(unsigned int ind, const Vector &vector)
   return true;
 }
 
+/*
+ * Metoda klasy Matrix, oblicza wyznacznik macierzy.
+ * Zwraca:
+ *           wyznacznik macierzy 
+ */
 double Matrix::determinant() const
 {
   Vector m[SIZE]; // Kopia macierzy, na niej wykonywane są wszystkie operacje
@@ -83,6 +88,16 @@ double Matrix::determinant() const
   return det;
 }
 
+/* 
+ * Metoda statyczna klasy Matrix, sprawdza czy macierz posiada zera po ukosie.
+ * Modyfikuje argument place.
+ * Argumenty:
+ *            m - wskażnik na tablice wektorów tworzących macierz,
+ *            place - argument modyfikowany, po wywołaniu przechowuje 
+ *                    indeks kolumny=wiersza, gdzie jest zero
+ * Zwraca:
+ *            true, jesli wystepuja zera w macierzy, false jesli nie
+ */
 bool Matrix::checkIfZeroDiagonal(Vector *m, int &place)
 {
   bool result = false;
@@ -95,6 +110,13 @@ bool Matrix::checkIfZeroDiagonal(Vector *m, int &place)
   return result;
 }
 
+/*
+ * Metoda klasy Matrix, zamienia wiersze w macierzy.
+ * Argumenty:
+ *            m - wskażnik na tablice wektorów tworzących macierz,
+ *            row1 - pierwszy indeks wierszu do zamiany,
+ *            row2 - drugi indeks wierszu do zamiany.
+ */
 void Matrix::replaceRows(Vector *m, int row1, int row2) const
 {
   Vector tmpV;
@@ -103,6 +125,11 @@ void Matrix::replaceRows(Vector *m, int row1, int row2) const
   m[row2] = tmpV;
 }
 
+/*
+ * Metoda statyczna klasy Matrix, sprowadza macierz do postaci trojkatnej.
+ * Argumenty:
+ *            m - wskaznik na tablice wektorow tworzacych macierz.
+ */
 void Matrix::eliminationMethodGauss(Vector *m)
 {
   int row, col;
@@ -151,6 +178,11 @@ std::ostream &operator<<(std::ostream &stream, const Matrix &matrix)
  *           matrix - macierz do wczytania.
  * Zwraca:
  *           referencje na strumien wejsciowy.
+ * Uwaga:
+ *           liczby powinny być postaci np.:
+ *           1 2 3
+ *           4 5 6
+ *           7 8 9
  */
 std::istream &operator>>(std::istream &stream, Matrix &matrix)
 {

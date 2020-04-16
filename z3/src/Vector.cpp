@@ -54,7 +54,9 @@ Vector::Vector()
 
 /*
  * Przeciazenie operatora >> dla klasy Vector
- * 
+ * Uwaga:
+ *        liczby do wczytania powinny być postaci np.:
+ *        1 2.7 3.1
  */
 std::istream &operator>>(std::istream &stream, Vector &vec)
 {
