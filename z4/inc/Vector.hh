@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SIZE.hh"
+#include "Complex.hh"
 #include <iostream>
 
 /*

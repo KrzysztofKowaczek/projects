@@ -2,7 +2,10 @@
 
 #include "Size.hh"
 #include "Vector.hh"
+#include "Complex.hh"
 #include <iostream>
+
+constexpr double ERR_MARGIN = 0.0000001
 
 /*
  * Klasa Matrix modeluje pojecie macierzy wielowymiarowej.
@@ -83,7 +86,7 @@ bool Matrix<T, Size>::checkIfZeroDiagonal(Vector<T, Size> *m, int &place) const
 {
   bool result = false;
   for(int i = 0; i < Size; i++)
-    if(abs(m[i][i]) < 0.0000001)
+    if(abs(m[i][i]) < ERR_MARGIN)
     {
       result = true;
       place = i;
@@ -120,7 +123,7 @@ void Matrix<T, Size>::eliminationMethodGauss(Vector<T, Size> *m) const
   for(col = 0; col < Size; col++)
     for(row = Size - 1; row > col; row--)
     {
-      if(abs(m[row][col]) > 0.0000001)
+      if(abs(m[row][col]) > ERR_MARGIN)
       {
         quotient = m[row][col] / m[col][col];
         m[row] -= m[col] * quotient;
@@ -148,7 +151,7 @@ double Matrix<T, Size>::determinant() const
     int bitmap = 0;
     for(int i = 0; i < Size; i++)
       // Oznacz niezerowe komorki w kolumnie
-      if(abs(m[i][place]) > 0.0000001)
+      if(abs(m[i][place]) > ERR_MARGIN)
         bitmap |= (1 << i); 
 
     if(bitmap == 0) // Jesli kolumna zawiera same zera 
