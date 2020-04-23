@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Vector.hh"
 #include "Matrix.hh"
+#include "Size.hh"
 
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa

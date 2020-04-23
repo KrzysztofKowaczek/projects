@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SIZE.hh"
+#include "Size.hh"
 #include "Complex.hh"
 #include <iostream>
 
@@ -14,7 +14,7 @@ class Vector
 {
 private:
   T _v[Size];
-  T badIdx = 0;
+  T badIdx;
 public:
   Vector() {for(T &type: _v) type = 0;}
   void operator = (T val) {for(T &type: _v) type = val;}
@@ -28,9 +28,9 @@ public:
   Vector<T, Size> operator * (double val) const;
   Vector<T, Size> operator / (double val) const;
   T operator[](unsigned int idx) const
-		{T badIdx = 0; if(idx < Size) return _v[idx]; return badIdx;}
+		{if(idx < Size) return _v[idx]; return badIdx;}
 	T &operator[](unsigned int idx)
-		{ if(idx < Size) return _v[idx]; return badIdx;}
+		{if(idx < Size) return _v[idx]; return badIdx;}
 };
 
 

@@ -17,10 +17,11 @@ int main()
   cin >> system;
   system.calculate();
   cout << system;*/
-  Vector<int, 2> v;
-  Matrix<Complex, 2> m;
-  cin << m;
-  cout >> m;
 
+  Matrix<Complex, SIZE> m;
+  cin >> m;
+  cout << m.determinant() << endl;
+  cout << "Chyba cos poszlo nie tak... Naprawie to w najblizszym czasie :)" << endl << endl;
+  
   return 0;
 }

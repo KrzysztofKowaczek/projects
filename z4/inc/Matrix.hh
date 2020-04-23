@@ -5,7 +5,7 @@
 #include "Complex.hh"
 #include <iostream>
 
-constexpr double ERR_MARGIN = 0.0000001
+constexpr double ERR_MARGIN = 0.0000001;
 
 /*
  * Klasa Matrix modeluje pojecie macierzy wielowymiarowej.
@@ -21,8 +21,8 @@ class Matrix
   void replaceRows(Vector<T, Size> *m, int row1, int row2) const;
   void eliminationMethodGauss(Vector<T, Size> *m) const;
 public:
-  Matrix() {for(Vector<T, Size> &vect: _m) vect = 0;}
-  double determinant() const;
+  //Matrix() {for(Vector<T, Size> &vect: _m) vect = 0;}
+  T determinant() const;
   Vector<T, Size> operator[](unsigned int idx) const
 		{if(idx < Size) return _m[idx]; return badVect;}
 	Vector<T, Size> &operator[](unsigned int idx)
@@ -126,7 +126,8 @@ void Matrix<T, Size>::eliminationMethodGauss(Vector<T, Size> *m) const
       if(abs(m[row][col]) > ERR_MARGIN)
       {
         quotient = m[row][col] / m[col][col];
-        m[row] -= m[col] * quotient;
+        for(int i = 0; i < Size; i++)
+          m[row][i] -= m[col][i] * quotient;
       }
     }
 }
@@ -137,11 +138,12 @@ void Matrix<T, Size>::eliminationMethodGauss(Vector<T, Size> *m) const
  *           wyznacznik macierzy 
  */
 template<typename T, int Size>
-double Matrix<T, Size>::determinant() const
+T Matrix<T, Size>::determinant() const
 {
   Vector<T, Size> m[Size]; // Kopia macierzy, na niej wykonywane są wszystkie operacje
   int rowChanges = 0, place;
-  double det = 1;
+  T det;
+  det = 1;
   for(int i = 0; i < Size; i++)
     for(int j = 0; j < Size; j++)
       m[i][j] = this->_m[j][i]; // Transponowanie macierzy
@@ -153,9 +155,6 @@ double Matrix<T, Size>::determinant() const
       // Oznacz niezerowe komorki w kolumnie
       if(abs(m[i][place]) > ERR_MARGIN)
         bitmap |= (1 << i); 
-
-    if(bitmap == 0) // Jesli kolumna zawiera same zera 
-      return 0;
 
     for(int i = 0; i < Size; i++)
       if(bitmap & (1 << i)) // Sprawdz ktory jest pierwszy niezerowy

@@ -7,6 +7,7 @@ double Complex::module() const
 	return sqrt(this->re*this->re + this->im*this->im);
 }
 
+
 /*!
  * Realizuje dodanie dwoch liczb zespolonych.
  * Argumenty:
@@ -135,7 +136,8 @@ bool operator == (const Complex &arg1, const Complex &arg2)
 std::istream & operator >> (std::istream &in, Complex &c)
 {
     Complex temp;
-    bool allgood = true;
+    
+    /*bool allgood = true;
     char d1 = 0, d2 = 0, d3 = 0;
     double x1 = 0, x2 = 0;
 
@@ -217,7 +219,11 @@ std::istream & operator >> (std::istream &in, Complex &c)
         in >> x1 >> x2;
         std::cerr << std::endl << "Blad zapisu liczby zespolonej!" 
             << std::endl << std::endl;
-    }
+    }*/
+    char c1, c2, c3;
+    in >> c1 >> temp.re >> temp.im >> c2 >> c3;
+    if(c1 == '(' && c2 == 'i' && c3 == ')')
+        c = temp;
     return in;
 }
 
@@ -269,4 +275,15 @@ double AbsSquared(Complex c)
 double abs(Complex c)
 {
 	return c.module();
+}
+
+void Complex::operator*=(const Complex &c)
+{
+    *this = *this * c;
+}
+
+void Complex::operator=(const int val)
+{
+    this->re = val;
+    this->im = val;
 }

@@ -12,9 +12,17 @@
  */
 struct Complex
 {
-    double re; /*! Pole repezentuje czesc rzeczywista. */
-    double im; /*! Pole repezentuje czesc urojona. */
-		double module() const;
+  double re; /*! Pole repezentuje czesc rzeczywista. */
+  double im; /*! Pole repezentuje czesc urojona. */
+  double module() const;
+  void operator*=(const Complex &c);
+  void operator*=(const int val)
+    {re = re * val; im = im * val;}
+  void operator+=(const Complex &c);
+  void operator/=(const Complex &c);
+  void operator-=(const Complex &c)
+    {re = re - c.re; im = im - c.im;}
+  void operator=(const int val);
 };
 
 /*
@@ -26,6 +34,7 @@ Complex operator * (const Complex &arg1, const Complex &arg2);
 Complex operator / (const Complex &arg1, const Complex &arg2);
 Complex operator / (const Complex &arg1, const double &arg2);
 bool operator == (const Complex &arg1, const Complex &arg2);
+
 std::istream & operator >> (std::istream &in, Complex &c);
 std::ostream & operator << (std::ostream &out, const Complex &c);
 
