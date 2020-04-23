@@ -16,8 +16,8 @@
  */
 std::istream &operator>>(std::istream &stream, SystemOfLinearEquations &system)
 {
-    Matrix m;
-    Vector v;
+    Matrix<double, SIZE> m;
+    Vector<double, SIZE> v;
     stream >> m >> v;
     system.setMatrix(m);
     system.setVector(v);
@@ -38,7 +38,7 @@ std::istream &operator>>(std::istream &stream, SystemOfLinearEquations &system)
 std::ostream &operator<<(std::ostream &stream,
                          const SystemOfLinearEquations &system)
 {
-	Vector slip = system.getSlip();
+	Vector<double, SIZE> slip = system.getSlip();
 	stream << "Macierz A^T:" << std::endl << std::endl;
   stream << system.getMatrix() << std::endl;
   stream << "Wektor wyrazow wolnych b:" << std::endl << std::endl;
@@ -50,9 +50,9 @@ std::ostream &operator<<(std::ostream &stream,
 			stream << ", x" << i + 2;
 		stream << "):" << std::endl << std::endl;
 		stream << system.getResult() << std::endl << std::endl;
-		stream << "         Wektor bledu:   Ax-b   = ( " << slip.getCell(0);
+		stream << "         Wektor bledu:   Ax-b   = ( " << slip[0];
 		for(int i = 1; i < SIZE; i++)
-			stream << ", " << slip.getCell(i);
+			stream << ", " << slip[i];
 		stream << " )" << std::endl;
 		stream << "Dlugosc wektora bledu: |(Ax-b)| = " << sqrt(slip & slip)
 					<< std::endl << std::endl;
@@ -67,31 +67,31 @@ std::ostream &operator<<(std::ostream &stream,
  * Zwraca:
  * 					wektor bedacy rozwiazaniem ukladu rownan.
  */
-Vector SystemOfLinearEquations::calculate()
+Vector<double, SIZE> SystemOfLinearEquations::calculate()
 {
-	Vector tmpV;
-	Matrix m = this->_m;
+	Vector<double, SIZE> tmpV;
+	Matrix<double, SIZE> m = this->_m;
 	double det[SIZE + 1];
 	double tmp;
 	det[SIZE] = m.determinant();
 	for(int i = 0; i < SIZE; i++)
 	{
 		m = this->_m;
-		m.setVector(i, this->_v);
+		m[i] = this->_v;
 		det[i] = m.determinant();
 	}
 	for(int i = 0; i < SIZE; i++)
-		this->_result.setCell(i, det[i]/det[SIZE]);
+		this->_result[i] = det[i]/det[SIZE];
 	
 	for(int i = 0; i < SIZE; i++)
 	{
 		tmp = 0;
 		for(int j = 0; j < SIZE; j++)
 		{
-			tmpV = this->_m.getVector(j);
-			tmp += tmpV.getCell(i) * this->_result.getCell(j);
+			tmpV = this->_m[j];
+			tmp += tmpV[i] * this->_result[j];
 		}
-		this->_slip.setCell(i, (this->_v.getCell(i) - tmp));
+		this->_slip[i] = this->_v[i] - tmp;
 	}
 
 	this->calculated = true;

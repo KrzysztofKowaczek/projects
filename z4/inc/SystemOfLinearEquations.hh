@@ -13,7 +13,7 @@ class SystemOfLinearEquations
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-  Matrix _m;
+  Matrix<double, SIZE> _m;
   Vector<double, SIZE> _v;
   Vector<double, SIZE> _result;
 	Vector<double, SIZE> _slip;
@@ -23,8 +23,8 @@ public:
    *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
    */
   Vector<double, SIZE> calculate();
-  Matrix getMatrix() const {return this->_m;}
-  void setMatrix(const Matrix &matrix) {this->_m = matrix;}
+  Matrix<double, SIZE> getMatrix() const {return this->_m;}
+  void setMatrix(const Matrix<double, SIZE> &matrix) {this->_m = matrix;}
   Vector<double, SIZE> getVector() const {return this->_v;}
   void setVector(const Vector<double, SIZE> &vector) {this->_v = vector;}
 	Vector<double, SIZE> getResult() const {return this->_result;}
