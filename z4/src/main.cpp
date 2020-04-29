@@ -7,8 +7,9 @@
 using namespace std;
 
 int main()
-{/*
-  SystemOfLinearEquations system; // To tylko przykladowe definicje zmiennej
+{
+  
+  SystemOfLinearEquations<Complex, 5> system;
 
   cout << endl
        << " Start programu " << endl
@@ -16,12 +17,7 @@ int main()
   
   cin >> system;
   system.calculate();
-  cout << system;*/
-
-  Matrix<Complex, SIZE> m;
-  cin >> m;
-  cout << m.determinant() << endl;
-  cout << "Chyba cos poszlo nie tak... Naprawie to w najblizszym czasie :)" << endl << endl;
+  cout << system;
   
   return 0;
 }

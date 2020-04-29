@@ -4,8 +4,14 @@
 #include "Vector.hh"
 #include "Complex.hh"
 #include <iostream>
+#include <cmath>
 
 constexpr double ERR_MARGIN = 0.0000001;
+
+double abs(double val)
+{
+  return sqrt(val*val);
+}
 
 /*
  * Klasa Matrix modeluje pojecie macierzy wielowymiarowej.
@@ -37,10 +43,10 @@ public:
  * Zwraca:
  *           referencje na strumien wyjsciowy.
  */
-template<typename T>
-std::ostream &operator<<(std::ostream &stream, const Matrix<T, SIZE> &matrix)
+template<typename T, int Size>
+std::ostream &operator<<(std::ostream &stream, const Matrix<T, Size> &matrix)
 {
-  for(int i = 0; i < SIZE; i++)
+  for(int i = 0; i < Size; i++)
     stream << matrix[i] << std::endl;
 
   return stream;
@@ -59,11 +65,11 @@ std::ostream &operator<<(std::ostream &stream, const Matrix<T, SIZE> &matrix)
  *           4 5 6
  *           7 8 9
  */
-template<typename T>
-std::istream &operator>>(std::istream &stream, Matrix<T, SIZE> &matrix)
+template<typename T, int Size>
+std::istream &operator>>(std::istream &stream, Matrix<T, Size> &matrix)
 {
-  Vector<T, SIZE> vect;
-  for(int i = 0; i < SIZE; i++)
+  Vector<T, Size> vect;
+  for(int i = 0; i < Size; i++)
   {
     stream >> vect;
     matrix[i] = vect;
@@ -120,14 +126,14 @@ void Matrix<T, Size>::eliminationMethodGauss(Vector<T, Size> *m) const
 {
   int row, col;
   T quotient;
+
   for(col = 0; col < Size; col++)
     for(row = Size - 1; row > col; row--)
     {
       if(abs(m[row][col]) > ERR_MARGIN)
       {
         quotient = m[row][col] / m[col][col];
-        for(int i = 0; i < Size; i++)
-          m[row][i] -= m[col][i] * quotient;
+        m[row] -= m[col] * quotient;
       }
     }
 }
@@ -171,3 +177,4 @@ T Matrix<T, Size>::determinant() const
   if(rowChanges % 2) det *= -1;
   return det;
 }
+

@@ -2,6 +2,8 @@
 #include "Complex.hh"
 #include <cmath>
 
+constexpr double ERR_MARGIN = 0.0000001;
+
 double Complex::module() const
 {
 	return sqrt(this->re*this->re + this->im*this->im);
@@ -73,21 +75,14 @@ Complex operator * (const Complex &arg1, const Complex &arg2)
 Complex operator / (const Complex &arg1, const Complex &arg2)
 {
     Complex result;
-    double abs = AbsSquared(arg2);
-    if(abs == 0)
-    {
-        result = arg1;
-        std::cerr << "NIE dzielimy przez 0!!!: ";
-        return result;
-    }
-
-    result = (arg1 * Conjugate(arg2)) / abs;
-
-    if(result.im == 0)
-        result.im = 0;
-    if(result.re == 0)
-        result.re = 0;
+    double absSq = AbsSquared(arg2);
+    result = (arg1 * Conjugate(arg2)) / absSq;
     
+    if(result.im*result.im < ERR_MARGIN)
+        result.im = 0;
+    if(result.re*result.re < ERR_MARGIN)
+        result.re = 0;
+
     return result;
 }
 
@@ -119,7 +114,7 @@ Complex operator / (const Complex &arg1, const double &arg2)
  */ 
 bool operator == (const Complex &arg1, const Complex &arg2)
 {
-    if(AbsSquared(arg1 - arg2) < 0.00001)
+    if(abs(arg1 - arg2) < ERR_MARGIN)
         return 1;
     else 
         return 0;
@@ -285,5 +280,5 @@ void Complex::operator*=(const Complex &c)
 void Complex::operator=(const int val)
 {
     this->re = val;
-    this->im = val;
+    this->im = 0;
 }

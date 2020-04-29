@@ -20,13 +20,13 @@ public:
   void operator = (T val) {for(T &type: _v) type = val;}
   void operator += (const Vector<T, Size> &vec);
   void operator -= (const Vector<T, Size> &vec);
-  void operator *= (const double val);
-  void operator /= (const double val);
+  void operator *= (T val);
+  void operator /= (T val);
   T operator & (const Vector<T, Size> &vec2) const;
   Vector<T, Size> operator + (const Vector<T, Size> &vec2) const;
   Vector<T, Size> operator - (const Vector<T, Size> &vec2) const;
-  Vector<T, Size> operator * (double val) const;
-  Vector<T, Size> operator / (double val) const;
+  Vector<T, Size> operator * (T val) const;
+  Vector<T, Size> operator / (T val) const;
   T operator[](unsigned int idx) const
 		{if(idx < Size) return _v[idx]; return badIdx;}
 	T &operator[](unsigned int idx)
@@ -40,11 +40,11 @@ public:
  *        liczby do wczytania powinny być postaci np.:
  *        1 2.7 3.1
  */
-template<typename T>
-std::istream &operator>>(std::istream &stream, Vector<T, SIZE> &vect)
+template<typename T, int Size>
+std::istream &operator>>(std::istream &stream, Vector<T, Size> &vect)
 {
-	Vector<T, SIZE> tmpV;
-	for(int i = 0; i < SIZE; i++)
+	Vector<T, Size> tmpV;
+	for(int i = 0; i < Size; i++)
 		stream >> tmpV[i];
 	if(!stream.fail())
 		vect = tmpV;
@@ -55,11 +55,11 @@ std::istream &operator>>(std::istream &stream, Vector<T, SIZE> &vect)
  * Przeciazenie operatora << dla klasy Vector
  * 
  */
-template<typename T>
-std::ostream &operator<<(std::ostream &stream, const Vector<T, SIZE> vect)
+template<typename T, int Size>
+std::ostream &operator<<(std::ostream &stream, const Vector<T, Size> vect)
 {
 	stream << "\t";
-	for(int i = 0; i < SIZE; i++)
+	for(int i = 0; i < Size; i++)
 		stream << vect[i] << " ";
 	
 	stream << std::endl;
@@ -113,7 +113,7 @@ T Vector<T, Size>::operator&(const Vector<T,  Size> &vec) const
  * 
  */
 template<typename T, int  Size>
-Vector<T, Size> Vector<T,  Size>::operator*(double val) const
+Vector<T, Size> Vector<T,  Size>::operator*(T val) const
 {
   Vector<T, Size> result;
   for(int i = 0; i <  Size; i++)
@@ -127,7 +127,7 @@ Vector<T, Size> Vector<T,  Size>::operator*(double val) const
  * 
  */
 template<typename T, int  Size>
-Vector<T, Size> Vector<T,  Size>::operator/(double val) const
+Vector<T, Size> Vector<T,  Size>::operator/(T val) const
 {
   Vector<T,  Size> result;
   if(abs(val) < 0.0000001)
@@ -153,16 +153,16 @@ void Vector<T, Size>::operator-=(const Vector<T,  Size> &vec)
 }
 
 template<typename T, int  Size>
-void Vector<T, Size>::operator*=(double val)
+void Vector<T, Size>::operator*=(T val)
 {
   for(int i = 0; i <  Size; i++)
     this->_v[i] *= val;
 }
 
 template<typename T, int  Size>
-void Vector<T,  Size>::operator/=(double val)
+void Vector<T,  Size>::operator/=(T val)
 {
-  if(val != 0)
+  if(!(val == 0))
     for(int i = 0; i <  Size; i++)
       this->_v[i] /= val;
 }
