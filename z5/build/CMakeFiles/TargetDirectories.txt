@@ -1,3 +1,0 @@
-/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/rebuild_cache.dir
-/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/edit_cache.dir
-/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/gnuplot.dir

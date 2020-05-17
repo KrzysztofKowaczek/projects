@@ -1,0 +1,107 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/bin/ld: cannot find Scrt1.o: Nie ma takiego pliku ani katalogu
+/usr/bin/ld: cannot find crti.o: Nie ma takiego pliku ani katalogu
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Determining if the C compiler works failed with the following output:
+Change Dir: /home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c89d4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c89d4.dir/build.make CMakeFiles/cmTC_c89d4.dir/build
+make[1]: Wejście do katalogu '/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c89d4.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c89d4.dir/testCCompiler.c.o   -c /home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_c89d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c89d4.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c89d4.dir/testCCompiler.c.o  -o cmTC_c89d4 
+/usr/bin/ld: cannot find Scrt1.o: Nie ma takiego pliku ani katalogu
+/usr/bin/ld: cannot find crti.o: Nie ma takiego pliku ani katalogu
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c89d4.dir/build.make:97: recipe for target 'cmTC_c89d4' failed
+make[1]: *** [cmTC_c89d4] Error 1
+make[1]: Opuszczenie katalogu '/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c89d4/fast' failed
+make: *** [cmTC_c89d4/fast] Error 2
+
+
