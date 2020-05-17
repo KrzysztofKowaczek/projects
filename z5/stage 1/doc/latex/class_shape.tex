@@ -1,0 +1,111 @@
+\hypertarget{class_shape}{}\section{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+Modeluje pojęcie bryły jako zbiór punktów w przestrzeni.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+hh$>$}
+
+
+
+Inheritance diagram for Shape\+:
+% FIG 0
+
+
+Collaboration diagram for Shape\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_shape_a87f2bd8b0e83a3d30cb94a13c150823f}{translate} (const \hyperlink{class_vector}{Vector3D} \&trans)
+\begin{DoxyCompactList}\small\item\em Metoda ta ustawia wektor translacji bryły. \end{DoxyCompactList}\item 
+\hyperlink{class_vector}{Vector3D} \hyperlink{class_shape_a8eadd85a6f07570cab972bd4d22fe835}{get\+Translation} () const
+\begin{DoxyCompactList}\small\item\em Zwraca wektor translacji bryły. \end{DoxyCompactList}\item 
+\hyperlink{class_shape_a7697a9694ec691492f9dbe117a640f58}{Shape} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_shape}{Shape}. \end{DoxyCompactList}\item 
+\hyperlink{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}{Shape} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bezparametryczny klasy \hyperlink{class_shape}{Shape}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_a6a334804ee36c2a7dfe1d28fcfec1a67}\label{class_shape_a6a334804ee36c2a7dfe1d28fcfec1a67}} 
+std\+::vector$<$ \hyperlink{class_vector}{Vector3D} $>$ {\bfseries \+\_\+points}
+\item 
+\mbox{\Hypertarget{class_shape_a9a9b788ac911da9996873486f12ccbbb}\label{class_shape_a9a9b788ac911da9996873486f12ccbbb}} 
+\hyperlink{class_vector}{Vector3D} {\bfseries \+\_\+translation}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Modeluje pojęcie bryły jako zbiór punktów w przestrzeni. 
+
+Klasa ta służy do przechowywania punktów składowych bryły oraz ich przesunięcia względem środka bezwzględnego układu współrzędnych. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_a7697a9694ec691492f9dbe117a640f58}\label{class_shape_a7697a9694ec691492f9dbe117a640f58}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \hyperlink{class_shape}{Shape}. 
+
+Wczytuje z pliku współrzędne bryły.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku ze współrzędnymi. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}\label{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor bezparametryczny klasy \hyperlink{class_shape}{Shape}. 
+
+Nic nie inicjalizuje, po prostu sobie jest. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a8eadd85a6f07570cab972bd4d22fe835}\label{class_shape_a8eadd85a6f07570cab972bd4d22fe835}} 
+\index{Shape@{Shape}!get\+Translation@{get\+Translation}}
+\index{get\+Translation@{get\+Translation}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{get\+Translation()}{getTranslation()}}
+{\footnotesize\ttfamily \hyperlink{class_vector}{Vector3D} Shape\+::get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca wektor translacji bryły. 
+
+\begin{DoxyReturn}{Returns}
+Vector3D -\/ wektor translacji. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a87f2bd8b0e83a3d30cb94a13c150823f}\label{class_shape_a87f2bd8b0e83a3d30cb94a13c150823f}} 
+\index{Shape@{Shape}!translate@{translate}}
+\index{translate@{translate}!Shape@{Shape}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Shape\+::translate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_vector}{Vector3D} \&}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda ta ustawia wektor translacji bryły. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & Wektor translacji bryły. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\+Dokumenty/projects/z5/stage 1/prj/inc/Shape.\+hh\item 
+/home/krzysztof/\+Dokumenty/projects/z5/stage 1/prj/src/Shape.\+cpp\end{DoxyCompactItemize}

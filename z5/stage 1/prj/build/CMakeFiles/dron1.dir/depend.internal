@@ -6,12 +6,12 @@ CMakeFiles/dron1.dir/src/Cuboid.cpp.o
  ../inc/Matrix.hh
  ../inc/Shape.hh
  ../inc/Vector.hh
- /home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp
+ /home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp
 CMakeFiles/dron1.dir/src/Shape.cpp.o
  ../inc/Matrix.hh
  ../inc/Shape.hh
  ../inc/Vector.hh
- /home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp
+ /home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp
 CMakeFiles/dron1.dir/src/animation.cpp.o
  ../inc/Cuboid.hh
  ../inc/Matrix.hh
@@ -19,10 +19,10 @@ CMakeFiles/dron1.dir/src/animation.cpp.o
  ../inc/Vector.hh
  ../inc/filenames.hh
  ../inc/gnuplot_link.hh
- /home/krzysztof/Dokumenty/projects/z5/src/animation.cpp
+ /home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o
  ../inc/gnuplot_link.hh
- /home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp
+ /home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp
 CMakeFiles/dron1.dir/src/main.cpp.o
  ../inc/Cuboid.hh
  ../inc/Matrix.hh
@@ -31,4 +31,4 @@ CMakeFiles/dron1.dir/src/main.cpp.o
  ../inc/animation.hh
  ../inc/filenames.hh
  ../inc/gnuplot_link.hh
- /home/krzysztof/Dokumenty/projects/z5/src/main.cpp
+ /home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/krzysztof/Dokumenty/projects/z5
+CMAKE_SOURCE_DIR = "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/krzysztof/Dokumenty/projects/z5/build
+CMAKE_BINARY_DIR = "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/dron1.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/dron1.dir/flags.make
 
 CMakeFiles/dron1.dir/src/Cuboid.cpp.o: CMakeFiles/dron1.dir/flags.make
 CMakeFiles/dron1.dir/src/Cuboid.cpp.o: ../src/Cuboid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dron1.dir/src/Cuboid.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/Cuboid.cpp.o -c /home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dron1.dir/src/Cuboid.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/Cuboid.cpp.o -c "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp"
 
 CMakeFiles/dron1.dir/src/Cuboid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dron1.dir/src/Cuboid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp > CMakeFiles/dron1.dir/src/Cuboid.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp" > CMakeFiles/dron1.dir/src/Cuboid.cpp.i
 
 CMakeFiles/dron1.dir/src/Cuboid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dron1.dir/src/Cuboid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp -o CMakeFiles/dron1.dir/src/Cuboid.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp" -o CMakeFiles/dron1.dir/src/Cuboid.cpp.s
 
 CMakeFiles/dron1.dir/src/Cuboid.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/dron1.dir/src/Cuboid.cpp.o.provides.build: CMakeFiles/dron1.dir/src/C
 
 CMakeFiles/dron1.dir/src/Shape.cpp.o: CMakeFiles/dron1.dir/flags.make
 CMakeFiles/dron1.dir/src/Shape.cpp.o: ../src/Shape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dron1.dir/src/Shape.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/Shape.cpp.o -c /home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dron1.dir/src/Shape.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/Shape.cpp.o -c "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp"
 
 CMakeFiles/dron1.dir/src/Shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dron1.dir/src/Shape.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp > CMakeFiles/dron1.dir/src/Shape.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp" > CMakeFiles/dron1.dir/src/Shape.cpp.i
 
 CMakeFiles/dron1.dir/src/Shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dron1.dir/src/Shape.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp -o CMakeFiles/dron1.dir/src/Shape.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp" -o CMakeFiles/dron1.dir/src/Shape.cpp.s
 
 CMakeFiles/dron1.dir/src/Shape.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/dron1.dir/src/Shape.cpp.o.provides.build: CMakeFiles/dron1.dir/src/Sh
 
 CMakeFiles/dron1.dir/src/animation.cpp.o: CMakeFiles/dron1.dir/flags.make
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../src/animation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dron1.dir/src/animation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/animation.cpp.o -c /home/krzysztof/Dokumenty/projects/z5/src/animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dron1.dir/src/animation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/animation.cpp.o -c "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp"
 
 CMakeFiles/dron1.dir/src/animation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dron1.dir/src/animation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysztof/Dokumenty/projects/z5/src/animation.cpp > CMakeFiles/dron1.dir/src/animation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp" > CMakeFiles/dron1.dir/src/animation.cpp.i
 
 CMakeFiles/dron1.dir/src/animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dron1.dir/src/animation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysztof/Dokumenty/projects/z5/src/animation.cpp -o CMakeFiles/dron1.dir/src/animation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp" -o CMakeFiles/dron1.dir/src/animation.cpp.s
 
 CMakeFiles/dron1.dir/src/animation.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/dron1.dir/src/animation.cpp.o.provides.build: CMakeFiles/dron1.dir/sr
 
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o: CMakeFiles/dron1.dir/flags.make
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o: ../src/gnuplot_link.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o -c /home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o -c "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp"
 
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dron1.dir/src/gnuplot_link.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp > CMakeFiles/dron1.dir/src/gnuplot_link.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp" > CMakeFiles/dron1.dir/src/gnuplot_link.cpp.i
 
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dron1.dir/src/gnuplot_link.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp -o CMakeFiles/dron1.dir/src/gnuplot_link.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp" -o CMakeFiles/dron1.dir/src/gnuplot_link.cpp.s
 
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o.provides.build: CMakeFiles/dron1.dir
 
 CMakeFiles/dron1.dir/src/main.cpp.o: CMakeFiles/dron1.dir/flags.make
 CMakeFiles/dron1.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/dron1.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/main.cpp.o -c /home/krzysztof/Dokumenty/projects/z5/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/dron1.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dron1.dir/src/main.cpp.o -c "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp"
 
 CMakeFiles/dron1.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dron1.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krzysztof/Dokumenty/projects/z5/src/main.cpp > CMakeFiles/dron1.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp" > CMakeFiles/dron1.dir/src/main.cpp.i
 
 CMakeFiles/dron1.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dron1.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krzysztof/Dokumenty/projects/z5/src/main.cpp -o CMakeFiles/dron1.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp" -o CMakeFiles/dron1.dir/src/main.cpp.s
 
 CMakeFiles/dron1.dir/src/main.cpp.o.requires:
 
@@ -195,7 +195,7 @@ dron1: CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o
 dron1: CMakeFiles/dron1.dir/src/main.cpp.o
 dron1: CMakeFiles/dron1.dir/build.make
 dron1: CMakeFiles/dron1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable dron1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable dron1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dron1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/dron1.dir/clean:
 .PHONY : CMakeFiles/dron1.dir/clean
 
 CMakeFiles/dron1.dir/depend:
-	cd /home/krzysztof/Dokumenty/projects/z5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/krzysztof/Dokumenty/projects/z5 /home/krzysztof/Dokumenty/projects/z5 /home/krzysztof/Dokumenty/projects/z5/build /home/krzysztof/Dokumenty/projects/z5/build /home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/dron1.dir/depend
 

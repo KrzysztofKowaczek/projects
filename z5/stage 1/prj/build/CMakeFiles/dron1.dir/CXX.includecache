@@ -66,9 +66,9 @@ list
 vector
 -
 
-/home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp
 Cuboid.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Cuboid.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.hh
 vector
 -
 fstream
@@ -80,9 +80,9 @@ string
 cmath
 -
 
-/home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp
 Shape.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Shape.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.hh
 string
 -
 iostream
@@ -92,21 +92,21 @@ fstream
 vector
 -
 
-/home/krzysztof/Dokumenty/projects/z5/src/animation.cpp
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp
 gnuplot_link.hh
-/home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.hh
 Vector.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Vector.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Vector.hh
 Cuboid.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Cuboid.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.hh
 filenames.hh
-/home/krzysztof/Dokumenty/projects/z5/src/filenames.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/filenames.hh
 chrono
 -
 thread
 -
 
-/home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp
 cstdlib
 -
 cstdio
@@ -126,9 +126,9 @@ fcntl.h
 sstream
 -
 gnuplot_link.hh
-/home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.hh
 
-/home/krzysztof/Dokumenty/projects/z5/src/main.cpp
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp
 iostream
 -
 iomanip
@@ -140,15 +140,15 @@ string
 cmath
 -
 gnuplot_link.hh
-/home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.hh
 Cuboid.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Cuboid.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.hh
 Vector.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Vector.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Vector.hh
 Matrix.hh
-/home/krzysztof/Dokumenty/projects/z5/src/Matrix.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Matrix.hh
 animation.hh
-/home/krzysztof/Dokumenty/projects/z5/src/animation.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.hh
 filenames.hh
-/home/krzysztof/Dokumenty/projects/z5/src/filenames.hh
+/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/filenames.hh
 

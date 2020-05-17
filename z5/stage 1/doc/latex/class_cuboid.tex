@@ -1,0 +1,105 @@
+\hypertarget{class_cuboid}{}\section{Cuboid Class Reference}
+\label{class_cuboid}\index{Cuboid@{Cuboid}}
+
+
+Modeluje pojęcie prostopadłościanu jako zbiór punktów w przestrzeni.  
+
+
+
+
+{\ttfamily \#include $<$Cuboid.\+hh$>$}
+
+
+
+Inheritance diagram for Cuboid\+:
+% FIG 0
+
+
+Collaboration diagram for Cuboid\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}{Cuboid} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_cuboid}{Cuboid}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuboid_a22093add11b2e04a5bb84eaa773bcadf}{set\+Angle} (double angle)
+\begin{DoxyCompactList}\small\item\em Ustawia kąt obrotu prostopadłościanu względem osi Z. \end{DoxyCompactList}\item 
+double \hyperlink{class_cuboid_a1996331a8a2eaa699e11e5acf62bd79f}{get\+Angle} () const
+\begin{DoxyCompactList}\small\item\em Zwraca kąt obrotu prostopadłościanu względem osi Z. \end{DoxyCompactList}\item 
+void \hyperlink{class_cuboid_a0668739d601192eee110f4e50a1ddd13}{draw} (std\+::string filename) const
+\begin{DoxyCompactList}\small\item\em Zapisuje współrzędne prostopadłościanu po obliczeniach do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Modeluje pojęcie prostopadłościanu jako zbiór punktów w przestrzeni. 
+
+Dziedziczy z klasy \hyperlink{class_shape}{Shape}, rozszerzając ją o pojęcie kątu obrotu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}\label{class_cuboid_a1abf60e93d024b7a01ee5b1a48f1f08a}} 
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\index{Cuboid@{Cuboid}!Cuboid@{Cuboid}}
+\subsubsection{\texorpdfstring{Cuboid()}{Cuboid()}}
+{\footnotesize\ttfamily Cuboid\+::\+Cuboid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \hyperlink{class_cuboid}{Cuboid}. 
+
+Inicjalizuje rostopadłościan wczytując model z pliku. Model ten staje się wzorcem odniesienia do wszelkich operacji. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cuboid_a0668739d601192eee110f4e50a1ddd13}\label{class_cuboid_a0668739d601192eee110f4e50a1ddd13}} 
+\index{Cuboid@{Cuboid}!draw@{draw}}
+\index{draw@{draw}!Cuboid@{Cuboid}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cuboid\+::draw (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Zapisuje współrzędne prostopadłościanu po obliczeniach do pliku. 
+
+Funkcja oblicza obrót każdego punktu względem osi Z oraz przesuwa każdą współrzędną prostopadłościanu o wektor translacji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku, do którego mają zostać wpisane punkty. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cuboid_a1996331a8a2eaa699e11e5acf62bd79f}\label{class_cuboid_a1996331a8a2eaa699e11e5acf62bd79f}} 
+\index{Cuboid@{Cuboid}!get\+Angle@{get\+Angle}}
+\index{get\+Angle@{get\+Angle}!Cuboid@{Cuboid}}
+\subsubsection{\texorpdfstring{get\+Angle()}{getAngle()}}
+{\footnotesize\ttfamily double Cuboid\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca kąt obrotu prostopadłościanu względem osi Z. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ kąt obrotu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cuboid_a22093add11b2e04a5bb84eaa773bcadf}\label{class_cuboid_a22093add11b2e04a5bb84eaa773bcadf}} 
+\index{Cuboid@{Cuboid}!set\+Angle@{set\+Angle}}
+\index{set\+Angle@{set\+Angle}!Cuboid@{Cuboid}}
+\subsubsection{\texorpdfstring{set\+Angle()}{setAngle()}}
+{\footnotesize\ttfamily void Cuboid\+::set\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ustawia kąt obrotu prostopadłościanu względem osi Z. 
+
+Ustawia kąt obrotu względem osi Z, którego wykorzystuje klasa \hyperlink{class_cuboid}{Cuboid}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Kąt obrotu względem osi Z. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\+Dokumenty/projects/z5/stage 1/prj/inc/Cuboid.\+hh\item 
+/home/krzysztof/\+Dokumenty/projects/z5/stage 1/prj/src/Cuboid.\+cpp\end{DoxyCompactItemize}

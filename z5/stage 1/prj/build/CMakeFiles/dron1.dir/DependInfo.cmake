@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/krzysztof/Dokumenty/projects/z5/src/Cuboid.cpp" "/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/src/Cuboid.cpp.o"
-  "/home/krzysztof/Dokumenty/projects/z5/src/Shape.cpp" "/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/src/Shape.cpp.o"
-  "/home/krzysztof/Dokumenty/projects/z5/src/animation.cpp" "/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/src/animation.cpp.o"
-  "/home/krzysztof/Dokumenty/projects/z5/src/gnuplot_link.cpp" "/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o"
-  "/home/krzysztof/Dokumenty/projects/z5/src/main.cpp" "/home/krzysztof/Dokumenty/projects/z5/build/CMakeFiles/dron1.dir/src/main.cpp.o"
+  "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Cuboid.cpp" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/src/Cuboid.cpp.o"
+  "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/Shape.cpp" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/src/Shape.cpp.o"
+  "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/animation.cpp" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/src/animation.cpp.o"
+  "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/gnuplot_link.cpp" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o"
+  "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/src/main.cpp" "/home/krzysztof/Dokumenty/projects/z5/stage 1/prj/build/CMakeFiles/dron1.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
