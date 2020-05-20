@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/gnuplot.dir/src/Cuboid.cpp.o CMakeFiles/gnuplot.dir/src/Shape.cpp.o CMakeFiles/gnuplot.dir/src/gnuplot_link.cpp.o CMakeFiles/gnuplot.dir/src/main.cpp.o  -o gnuplot 
