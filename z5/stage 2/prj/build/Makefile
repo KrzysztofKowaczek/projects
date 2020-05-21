@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/krzysiu/projects/z5/stage 1/prj"
+CMAKE_SOURCE_DIR = "/home/krzysiu/projects/z5/stage 2/prj"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/krzysiu/projects/z5/stage 1/prj/build"
+CMAKE_BINARY_DIR = "/home/krzysiu/projects/z5/stage 2/prj/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/krzysiu/projects/z5/stage 1/prj/build/CMakeFiles" "/home/krzysiu/projects/z5/stage 1/prj/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/krzysiu/projects/z5/stage 2/prj/build/CMakeFiles" "/home/krzysiu/projects/z5/stage 2/prj/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/krzysiu/projects/z5/stage 1/prj/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/krzysiu/projects/z5/stage 2/prj/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,87 @@ src/Cuboid.s: src/Cuboid.cpp.s
 src/Cuboid.cpp.s:
 	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Cuboid.cpp.s
 .PHONY : src/Cuboid.cpp.s
+
+src/Drone.o: src/Drone.cpp.o
+
+.PHONY : src/Drone.o
+
+# target to build an object file
+src/Drone.cpp.o:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.o
+.PHONY : src/Drone.cpp.o
+
+src/Drone.i: src/Drone.cpp.i
+
+.PHONY : src/Drone.i
+
+# target to preprocess a source file
+src/Drone.cpp.i:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.i
+.PHONY : src/Drone.cpp.i
+
+src/Drone.s: src/Drone.cpp.s
+
+.PHONY : src/Drone.s
+
+# target to generate assembly for a file
+src/Drone.cpp.s:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.s
+.PHONY : src/Drone.cpp.s
+
+src/Matrix.o: src/Matrix.cpp.o
+
+.PHONY : src/Matrix.o
+
+# target to build an object file
+src/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.o
+.PHONY : src/Matrix.cpp.o
+
+src/Matrix.i: src/Matrix.cpp.i
+
+.PHONY : src/Matrix.i
+
+# target to preprocess a source file
+src/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.i
+.PHONY : src/Matrix.cpp.i
+
+src/Matrix.s: src/Matrix.cpp.s
+
+.PHONY : src/Matrix.s
+
+# target to generate assembly for a file
+src/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.s
+.PHONY : src/Matrix.cpp.s
+
+src/Rotor.o: src/Rotor.cpp.o
+
+.PHONY : src/Rotor.o
+
+# target to build an object file
+src/Rotor.cpp.o:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.o
+.PHONY : src/Rotor.cpp.o
+
+src/Rotor.i: src/Rotor.cpp.i
+
+.PHONY : src/Rotor.i
+
+# target to preprocess a source file
+src/Rotor.cpp.i:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.i
+.PHONY : src/Rotor.cpp.i
+
+src/Rotor.s: src/Rotor.cpp.s
+
+.PHONY : src/Rotor.s
+
+# target to generate assembly for a file
+src/Rotor.cpp.s:
+	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.s
+.PHONY : src/Rotor.cpp.s
 
 src/Shape.o: src/Shape.cpp.o
 
@@ -270,6 +351,15 @@ help:
 	@echo "... src/Cuboid.o"
 	@echo "... src/Cuboid.i"
 	@echo "... src/Cuboid.s"
+	@echo "... src/Drone.o"
+	@echo "... src/Drone.i"
+	@echo "... src/Drone.s"
+	@echo "... src/Matrix.o"
+	@echo "... src/Matrix.i"
+	@echo "... src/Matrix.s"
+	@echo "... src/Rotor.o"
+	@echo "... src/Rotor.i"
+	@echo "... src/Rotor.s"
 	@echo "... src/Shape.o"
 	@echo "... src/Shape.i"
 	@echo "... src/Shape.s"

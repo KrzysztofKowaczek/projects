@@ -3,6 +3,7 @@
 #include "gnuplot_link.hh"
 #include "Vector.hh"
 #include "Cuboid.hh"
+#include "Drone.hh"
 
 /**
  * @brief Funkcja służąca do animowania ruchów.
@@ -17,5 +18,5 @@
  * @param translation Wektor translacji/przeniesienia prostopadłoscianu.
  * @param angle Kąt unoszenia/opadania podczas animacji.
  */
-void animate(PzG::GnuplotLink &link, Cuboid &cuboid, 
+void animate(PzG::GnuplotLink &link, Drone &drone, 
             const Vector3D &translation, double angle);

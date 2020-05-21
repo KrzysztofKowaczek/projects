@@ -14,6 +14,7 @@ constexpr double ERR_MARGIN = 0.0000001;
 template<typename T, int Size>
 class Matrix
 {
+protected:
   Vector<T, Size> _m[Size];
   Vector<T, Size> badVect;
   bool checkIfZeroDiagonal(Vector<T, Size> *m, int &place) const;
@@ -28,6 +29,14 @@ public:
 		{if(idx < Size) return _m[idx]; return badVect;}
   static double abs(double val) {return sqrt(val*val);}
   Vector<T, Size> operator*(const Vector<T, Size> &vect) const;
+};
+
+class Matrix3D: public Matrix<double, 3>
+{
+public:
+  void rotationX(double angle);
+  void rotationY(double angle);
+  void rotationZ(double angle);
 };
 
 /*
@@ -190,5 +199,3 @@ Vector<T, Size> Matrix<T, Size>::operator*(const Vector<T, Size> &vect) const
 
   return result;
 }
-
-using Matrix3D = Matrix<double, 3>;

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/home/krzysiu/projects/z5/stage 1/prj/inc" 
+CXX_INCLUDES = -I"/home/krzysiu/projects/z5/stage 2/prj/inc" 
 

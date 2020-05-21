@@ -5,6 +5,7 @@
 #include <cmath>
 
 #include "gnuplot_link.hh"
+#include "Drone.hh"
 #include "Cuboid.hh"
 #include "Vector.hh"
 #include "Matrix.hh"
@@ -21,21 +22,23 @@ const string kMenuRush("r");
 const string kMenuMenuShow("m"); 
 
 void showMenu();
-Vector3D calculateMove(double lenght, double angle, const Cuboid &cuboid);
+Vector3D calculateMove(double lenght, double angle, const Drone &drone);
 
 int main()
 {
     string userOption;
-    Cuboid cuboid;        // To tylko przykladowe definicje zmiennej
+    Drone drone;
     PzG::GnuplotLink link; // Ta zmienna jest potrzebna do wizualizacji
-    cuboid.draw(kDroneFile);
+    drone.draw(kDroneFile);
 
     link.Init();
     link.AddFilename(kDroneFile.c_str(), PzG::LS_CONTINUOUS, 1);
     link.AddFilename(kSurfaceFile.c_str(), PzG::LS_CONTINUOUS, 1);
     link.AddFilename(kCeilFile.c_str(), PzG::LS_CONTINUOUS, 1);
+    //link.AddFilename(kModelRotor.c_str(), PzG::LS_CONTINUOUS, 1);
     link.SetDrawingMode(PzG::DM_3D);
     link.Draw();
+
 
     showMenu();
 
@@ -52,7 +55,7 @@ int main()
             cout << " Podaj wartosc kata obrotu w stopniach." << endl;
             cout << " Wartosc kata> ";
             cin >> angle;
-            animate(link, cuboid, 0, angle);
+            animate(link, drone, 0, angle);
         }
         else if(userOption == kMenuRush)
         {
@@ -68,14 +71,13 @@ int main()
             cout << " Wartosc odleglosci> ";
             cin >> lenght;
             cout << endl;
-            translation = calculateMove(lenght, angle, cuboid);
-            animate(link, cuboid, translation, 0);
+            translation = calculateMove(lenght, angle, drone);
+            animate(link, drone, translation, 0);
         }
         else if(userOption != kMenuEndProg)
             cout << "Zla opcja menu!" << endl << endl;
     } while (userOption != kMenuEndProg);
-    
-    return 0; 
+    return 0;
 }
 
 void showMenu()
@@ -86,12 +88,12 @@ void showMenu()
     cout << " k - koniec dzialania programu" << endl << endl;
 }
 
-Vector3D calculateMove(double lenght, double angle, const Cuboid &cuboid)
+Vector3D calculateMove(double lenght, double angle, const Drone &drone)
 {
     double Zrad = angle * PI / 180;
-    double XYrad = cuboid.getAngle() * PI / 180;
+    double XYrad = drone.getAngle() * PI / 180;
     double XYlenght = lenght * cos(Zrad);
-    Vector3D translation = cuboid.getTranslation();
+    Vector3D translation = drone.getTranslation();
     translation[2] = lenght * sin(Zrad);
     translation[0] = XYlenght * cos(XYrad);
     translation[1] = XYlenght * sin(XYrad);

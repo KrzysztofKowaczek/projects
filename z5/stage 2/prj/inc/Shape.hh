@@ -44,4 +44,6 @@ public:
      * Nic nie inicjalizuje, po prostu sobie jest.
      */
     Shape() {}
+
+    virtual void draw(std::string filename) const = 0;
 };

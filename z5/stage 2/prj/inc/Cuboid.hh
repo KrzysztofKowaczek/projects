@@ -20,7 +20,6 @@ class Cuboid : public Shape
 {
 private:
     double _angle;
-    void calculateAngle(Matrix3D &matrix) const;
 public:
     /**
      * @brief Konstruktor klasy Cuboid.
@@ -52,5 +51,5 @@ public:
      * 
      * @param filename Nazwa pliku, do którego mają zostać wpisane punkty.
      */
-    void draw(std::string filename) const;
+    virtual void draw(std::string filename) const override;
 };

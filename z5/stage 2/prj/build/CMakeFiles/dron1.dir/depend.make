@@ -7,13 +7,35 @@ CMakeFiles/dron1.dir/src/Cuboid.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron1.dir/src/Cuboid.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron1.dir/src/Cuboid.cpp.o: ../src/Cuboid.cpp
 
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Cuboid.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Drone.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Rotor.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Shape.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/Vector.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../inc/filenames.hh
+CMakeFiles/dron1.dir/src/Drone.cpp.o: ../src/Drone.cpp
+
+CMakeFiles/dron1.dir/src/Matrix.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron1.dir/src/Matrix.cpp.o: ../inc/Vector.hh
+CMakeFiles/dron1.dir/src/Matrix.cpp.o: ../src/Matrix.cpp
+
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../inc/Rotor.hh
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../inc/Shape.hh
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../inc/Vector.hh
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../inc/filenames.hh
+CMakeFiles/dron1.dir/src/Rotor.cpp.o: ../src/Rotor.cpp
+
 CMakeFiles/dron1.dir/src/Shape.cpp.o: ../inc/Matrix.hh
 CMakeFiles/dron1.dir/src/Shape.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron1.dir/src/Shape.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron1.dir/src/Shape.cpp.o: ../src/Shape.cpp
 
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Cuboid.hh
+CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Drone.hh
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Rotor.hh
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron1.dir/src/animation.cpp.o: ../inc/filenames.hh
@@ -24,7 +46,9 @@ CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o: ../inc/gnuplot_link.hh
 CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o: ../src/gnuplot_link.cpp
 
 CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Cuboid.hh
+CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Drone.hh
 CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Rotor.hh
 CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron1.dir/src/main.cpp.o: ../inc/animation.hh

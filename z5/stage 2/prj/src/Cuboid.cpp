@@ -14,10 +14,10 @@ void Cuboid::draw(std::string filename) const
     ofstream outputFile;
     outputFile.open(filename);
     Matrix3D matrix;
-    calculateAngle(matrix);
+    matrix.rotationZ(_angle);
     if(!outputFile.is_open())
     {
-        cerr << "Unable to open drone file!" << endl;
+        cerr << "Unable to open cuboid file!" << endl;
         return;
     }
     for(unsigned i = 0; i < _points.size(); ++i)
@@ -47,18 +47,4 @@ Cuboid::Cuboid(): _angle{0}
         _points.push_back(point);
     }
     inputFile.close();
-}
-
-void Cuboid::calculateAngle(Matrix3D &matrix) const
-{   
-    double radians = _angle * PI / 180.0;
-
-    for(int i = 0; i < 3; i++)
-        for(int j = 0; j < 3; j++)
-            matrix[i][j] = 0;
-    
-    matrix[0][0] = matrix[1][1] = cos(radians);
-    matrix[1][0] = sin(radians);
-    matrix[0][1] = -1 * matrix[1][0];
-    matrix[2][2] = 1;
 }

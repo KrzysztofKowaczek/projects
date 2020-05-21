@@ -24,6 +24,18 @@ Vector.hh
 Matrix.hh
 ../inc/Matrix.hh
 
+../inc/Drone.hh
+string
+-
+Shape.hh
+../inc/Shape.hh
+Cuboid.hh
+../inc/Cuboid.hh
+Rotor.hh
+../inc/Rotor.hh
+filenames.hh
+../inc/filenames.hh
+
 ../inc/Matrix.hh
 Vector.hh
 ../inc/Vector.hh
@@ -31,6 +43,14 @@ iostream
 -
 cmath
 -
+
+../inc/Rotor.hh
+string
+-
+Shape.hh
+../inc/Shape.hh
+Vector.hh
+../inc/Vector.hh
 
 ../inc/Shape.hh
 vector
@@ -53,6 +73,8 @@ Vector.hh
 ../inc/Vector.hh
 Cuboid.hh
 ../inc/Cuboid.hh
+Drone.hh
+../inc/Drone.hh
 
 ../inc/filenames.hh
 string
@@ -66,47 +88,7 @@ list
 vector
 -
 
-/home/krzysiu/projects/z5/stage 1/prj/src/Cuboid.cpp
-Cuboid.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Cuboid.hh
-vector
--
-fstream
--
-iostream
--
-string
--
-cmath
--
-
-/home/krzysiu/projects/z5/stage 1/prj/src/Shape.cpp
-Shape.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Shape.hh
-string
--
-iostream
--
-fstream
--
-vector
--
-
-/home/krzysiu/projects/z5/stage 1/prj/src/animation.cpp
-gnuplot_link.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/gnuplot_link.hh
-Vector.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Vector.hh
-Cuboid.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Cuboid.hh
-filenames.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/filenames.hh
-chrono
--
-thread
--
-
-/home/krzysiu/projects/z5/stage 1/prj/src/main.cpp
+/home/krzysiu/projects/z5/stage 2/prj/src/main.cpp
 iostream
 -
 iomanip
@@ -118,15 +100,17 @@ string
 cmath
 -
 gnuplot_link.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/gnuplot_link.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/gnuplot_link.hh
+Drone.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Drone.hh
 Cuboid.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Cuboid.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.hh
 Vector.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Vector.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Vector.hh
 Matrix.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/Matrix.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Matrix.hh
 animation.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/animation.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/animation.hh
 filenames.hh
-/home/krzysiu/projects/z5/stage 1/prj/src/filenames.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/filenames.hh
 
