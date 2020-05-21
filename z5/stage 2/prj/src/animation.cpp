@@ -17,10 +17,10 @@ void animate(PzG::GnuplotLink &link, Drone &drone,
     Vector3D preTranslation = drone.getTranslation();
     double preAngle = drone.getAngle();
     while(angle > 360) angle -= 360;
-    Vector3D oneStepVector = translation / 200;
-    double oneStepAngle = angle / 200;
+    Vector3D oneStepVector = translation / 500;
+    double oneStepAngle = angle / 500;
 
-    for(int i = 0; i < 200; i++)
+    for(int i = 0; i < 500; i++)
     {
         this_thread::sleep_for(timespan);
         drone.translate(drone.getTranslation() + oneStepVector);

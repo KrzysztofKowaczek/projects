@@ -5,6 +5,7 @@ Drone::Drone()
     Vector3D mountPoint;
     mountPoint[0] = -25;
     mountPoint[1] = -20;
+    mountPoint[2] = 20;
     _leftRotor.setMountPoint(mountPoint);
     mountPoint[1] = 20;
     _rightRotor.setMountPoint(mountPoint);

@@ -28,6 +28,7 @@ public:
      * Model ten staje się wzorcem odniesienia do wszelkich operacji.
      */
     Cuboid();
+    Cuboid(std::string filename);
     /**
      * @brief Ustawia kąt obrotu prostopadłościanu względem osi Z.
      * 
@@ -52,4 +53,5 @@ public:
      * @param filename Nazwa pliku, do którego mają zostać wpisane punkty.
      */
     virtual void draw(std::string filename) const override;
+    virtual std::string getName() const override {return "prostopadloscian";}
 };

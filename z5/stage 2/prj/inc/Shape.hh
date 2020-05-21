@@ -46,4 +46,6 @@ public:
     Shape() {}
 
     virtual void draw(std::string filename) const = 0;
+    virtual std::string getName() const = 0;
+    virtual ~Shape() {}
 };

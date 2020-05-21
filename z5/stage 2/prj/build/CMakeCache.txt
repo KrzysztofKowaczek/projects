@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=dron1
+CMAKE_PROJECT_NAME:STATIC=dron2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -214,6 +214,12 @@ dron1_BINARY_DIR:STATIC=/home/krzysiu/projects/z5/stage 2/prj/build
 
 //Value Computed by CMake
 dron1_SOURCE_DIR:STATIC=/home/krzysiu/projects/z5/stage 2/prj
+
+//Value Computed by CMake
+dron2_BINARY_DIR:STATIC=/home/krzysiu/projects/z5/stage 2/prj/build
+
+//Value Computed by CMake
+dron2_SOURCE_DIR:STATIC=/home/krzysiu/projects/z5/stage 2/prj
 
 
 ########################

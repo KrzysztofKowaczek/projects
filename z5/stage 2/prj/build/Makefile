@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = "/home/krzysiu/projects/z5/stage 2/prj/build"
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named dron1
+# Target rules for targets named dron2
 
 # Build rule for target.
-dron1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dron1
-.PHONY : dron1
+dron2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dron2
+.PHONY : dron2
 
 # fast build rule for target.
-dron1/fast:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/build
-.PHONY : dron1/fast
+dron2/fast:
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/build
+.PHONY : dron2/fast
 
 src/Cuboid.o: src/Cuboid.cpp.o
 
@@ -129,7 +129,7 @@ src/Cuboid.o: src/Cuboid.cpp.o
 
 # target to build an object file
 src/Cuboid.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Cuboid.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Cuboid.cpp.o
 .PHONY : src/Cuboid.cpp.o
 
 src/Cuboid.i: src/Cuboid.cpp.i
@@ -138,7 +138,7 @@ src/Cuboid.i: src/Cuboid.cpp.i
 
 # target to preprocess a source file
 src/Cuboid.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Cuboid.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Cuboid.cpp.i
 .PHONY : src/Cuboid.cpp.i
 
 src/Cuboid.s: src/Cuboid.cpp.s
@@ -147,7 +147,7 @@ src/Cuboid.s: src/Cuboid.cpp.s
 
 # target to generate assembly for a file
 src/Cuboid.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Cuboid.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Cuboid.cpp.s
 .PHONY : src/Cuboid.cpp.s
 
 src/Drone.o: src/Drone.cpp.o
@@ -156,7 +156,7 @@ src/Drone.o: src/Drone.cpp.o
 
 # target to build an object file
 src/Drone.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Drone.cpp.o
 .PHONY : src/Drone.cpp.o
 
 src/Drone.i: src/Drone.cpp.i
@@ -165,7 +165,7 @@ src/Drone.i: src/Drone.cpp.i
 
 # target to preprocess a source file
 src/Drone.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Drone.cpp.i
 .PHONY : src/Drone.cpp.i
 
 src/Drone.s: src/Drone.cpp.s
@@ -174,7 +174,7 @@ src/Drone.s: src/Drone.cpp.s
 
 # target to generate assembly for a file
 src/Drone.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Drone.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Drone.cpp.s
 .PHONY : src/Drone.cpp.s
 
 src/Matrix.o: src/Matrix.cpp.o
@@ -183,7 +183,7 @@ src/Matrix.o: src/Matrix.cpp.o
 
 # target to build an object file
 src/Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Matrix.cpp.o
 .PHONY : src/Matrix.cpp.o
 
 src/Matrix.i: src/Matrix.cpp.i
@@ -192,7 +192,7 @@ src/Matrix.i: src/Matrix.cpp.i
 
 # target to preprocess a source file
 src/Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Matrix.cpp.i
 .PHONY : src/Matrix.cpp.i
 
 src/Matrix.s: src/Matrix.cpp.s
@@ -201,7 +201,7 @@ src/Matrix.s: src/Matrix.cpp.s
 
 # target to generate assembly for a file
 src/Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Matrix.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Matrix.cpp.s
 .PHONY : src/Matrix.cpp.s
 
 src/Rotor.o: src/Rotor.cpp.o
@@ -210,7 +210,7 @@ src/Rotor.o: src/Rotor.cpp.o
 
 # target to build an object file
 src/Rotor.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Rotor.cpp.o
 .PHONY : src/Rotor.cpp.o
 
 src/Rotor.i: src/Rotor.cpp.i
@@ -219,7 +219,7 @@ src/Rotor.i: src/Rotor.cpp.i
 
 # target to preprocess a source file
 src/Rotor.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Rotor.cpp.i
 .PHONY : src/Rotor.cpp.i
 
 src/Rotor.s: src/Rotor.cpp.s
@@ -228,7 +228,7 @@ src/Rotor.s: src/Rotor.cpp.s
 
 # target to generate assembly for a file
 src/Rotor.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Rotor.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Rotor.cpp.s
 .PHONY : src/Rotor.cpp.s
 
 src/Shape.o: src/Shape.cpp.o
@@ -237,7 +237,7 @@ src/Shape.o: src/Shape.cpp.o
 
 # target to build an object file
 src/Shape.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Shape.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.o
 .PHONY : src/Shape.cpp.o
 
 src/Shape.i: src/Shape.cpp.i
@@ -246,7 +246,7 @@ src/Shape.i: src/Shape.cpp.i
 
 # target to preprocess a source file
 src/Shape.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Shape.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.i
 .PHONY : src/Shape.cpp.i
 
 src/Shape.s: src/Shape.cpp.s
@@ -255,7 +255,7 @@ src/Shape.s: src/Shape.cpp.s
 
 # target to generate assembly for a file
 src/Shape.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/Shape.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.s
 .PHONY : src/Shape.cpp.s
 
 src/animation.o: src/animation.cpp.o
@@ -264,7 +264,7 @@ src/animation.o: src/animation.cpp.o
 
 # target to build an object file
 src/animation.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/animation.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.o
 .PHONY : src/animation.cpp.o
 
 src/animation.i: src/animation.cpp.i
@@ -273,7 +273,7 @@ src/animation.i: src/animation.cpp.i
 
 # target to preprocess a source file
 src/animation.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/animation.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.i
 .PHONY : src/animation.cpp.i
 
 src/animation.s: src/animation.cpp.s
@@ -282,7 +282,7 @@ src/animation.s: src/animation.cpp.s
 
 # target to generate assembly for a file
 src/animation.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/animation.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.s
 .PHONY : src/animation.cpp.s
 
 src/gnuplot_link.o: src/gnuplot_link.cpp.o
@@ -291,7 +291,7 @@ src/gnuplot_link.o: src/gnuplot_link.cpp.o
 
 # target to build an object file
 src/gnuplot_link.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/gnuplot_link.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/gnuplot_link.cpp.o
 .PHONY : src/gnuplot_link.cpp.o
 
 src/gnuplot_link.i: src/gnuplot_link.cpp.i
@@ -300,7 +300,7 @@ src/gnuplot_link.i: src/gnuplot_link.cpp.i
 
 # target to preprocess a source file
 src/gnuplot_link.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/gnuplot_link.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/gnuplot_link.cpp.i
 .PHONY : src/gnuplot_link.cpp.i
 
 src/gnuplot_link.s: src/gnuplot_link.cpp.s
@@ -309,7 +309,7 @@ src/gnuplot_link.s: src/gnuplot_link.cpp.s
 
 # target to generate assembly for a file
 src/gnuplot_link.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/gnuplot_link.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/gnuplot_link.cpp.s
 .PHONY : src/gnuplot_link.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -318,7 +318,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -327,7 +327,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -336,7 +336,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/dron1.dir/build.make CMakeFiles/dron1.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -345,9 +345,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... dron1"
+	@echo "... edit_cache"
+	@echo "... dron2"
 	@echo "... src/Cuboid.o"
 	@echo "... src/Cuboid.i"
 	@echo "... src/Cuboid.s"

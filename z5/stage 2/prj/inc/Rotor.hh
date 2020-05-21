@@ -22,4 +22,5 @@ public:
     double getRotation() const {return _rotation;}
     void setMountPoint(const Vector3D &mountPoint) {_mountPoint = mountPoint;}
     Vector3D getMountPoint() const {return _mountPoint;}
+    virtual std::string getName() const override {return "rotor";}
 };

@@ -1,6 +1,6 @@
 #include "Matrix.hh"
 #include "Vector.hh"
-#include "math.h"
+#include <cmath>
 
 constexpr double PI = 3.14159265;
 

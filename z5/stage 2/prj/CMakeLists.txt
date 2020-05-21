@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(dron1)
+project(dron2)
 include_directories(inc)
 file(GLOB SOURCE "src/*.cpp" "inc/*.hh")
 add_executable(${PROJECT_NAME} ${SOURCE})

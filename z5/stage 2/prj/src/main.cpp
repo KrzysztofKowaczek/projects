@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <cmath>
+#include <memory>
 
 #include "gnuplot_link.hh"
 #include "Drone.hh"
@@ -31,11 +32,15 @@ int main()
     PzG::GnuplotLink link; // Ta zmienna jest potrzebna do wizualizacji
     drone.draw(kDroneFile);
 
+    //nie ogarniam tego jeszcze do końca :/
+    shared_ptr<Shape> sharedPointer = make_shared<Cuboid>(kCuboid2File);
+    sharedPointer = make_shared<Cuboid>(kCuboid3File);
+
     link.Init();
     link.AddFilename(kDroneFile.c_str(), PzG::LS_CONTINUOUS, 1);
     link.AddFilename(kSurfaceFile.c_str(), PzG::LS_CONTINUOUS, 1);
     link.AddFilename(kCeilFile.c_str(), PzG::LS_CONTINUOUS, 1);
-    //link.AddFilename(kModelRotor.c_str(), PzG::LS_CONTINUOUS, 1);
+    //link.AddFilename(kCuboid2File.c_str(), PzG::LS_CONTINUOUS, 1);
     link.SetDrawingMode(PzG::DM_3D);
     link.Draw();
 

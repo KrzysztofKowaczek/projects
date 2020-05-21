@@ -42,9 +42,33 @@ Cuboid::Cuboid(): _angle{0}
     }
 
     Vector3D point;
+    std::string line;
     while(inputFile >> point)
-    {
         _points.push_back(point);
+
+    inputFile.close();
+}
+
+Cuboid::Cuboid(std::string filename): _angle{0}
+{
+    ifstream inputFile;
+    inputFile.open(filename);
+    if(!inputFile.is_open())
+    {
+        cerr << "Unable to load cuboid file!" 
+             << endl;
+        return;
+    }
+
+    Vector3D point;
+    while(!inputFile.fail())
+    {
+        if(inputFile.peek() == '#')
+            inputFile.ignore(10000, '\n');
+        
+        if(inputFile >> point)
+            _points.push_back(point);
+        
     }
     inputFile.close();
 }
