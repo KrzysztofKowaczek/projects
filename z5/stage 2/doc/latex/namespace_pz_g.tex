@@ -1,53 +1,41 @@
-\hypertarget{namespace_pz_g}{}\section{PzG Namespace Reference}
+\hypertarget{namespace_pz_g}{}\doxysection{PzG Namespace Reference}
 \label{namespace_pz_g}\index{PzG@{PzG}}
 
 
 Moduł narzędzi umożliwiających połącznie z G\+N\+U\+Plotem.  
 
 
-\subsection*{Classes}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_pz_g_1_1_file_info}{File\+Info}
+class \mbox{\hyperlink{class_pz_g_1_1_file_info}{File\+Info}}
 \begin{DoxyCompactList}\small\item\em Zestaw informacji dotyczący pliku i sposobu rysowania. \end{DoxyCompactList}\item 
-class \hyperlink{class_pz_g_1_1_gnuplot_link}{Gnuplot\+Link}
+class \mbox{\hyperlink{class_pz_g_1_1_gnuplot_link}{Gnuplot\+Link}}
 \begin{DoxyCompactList}\small\item\em Klasa realizuje interfejs do programu G\+N\+U\+Plot. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Enumerations}
+\doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}{Drawing\+Mode} \{ {\bfseries D\+M\+\_\+2D}, 
+enum \mbox{\hyperlink{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}{Drawing\+Mode}} \{ {\bfseries D\+M\+\_\+2D}, 
 {\bfseries D\+M\+\_\+3D}
- \}\begin{DoxyCompactList}\small\item\em Określa tryb rysowania realizowanego przez program {\ttfamily gnuplot}. \end{DoxyCompactList}
-\item 
-enum \hyperlink{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}{Line\+Style} \{ {\bfseries L\+S\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}, 
+ \}
+\begin{DoxyCompactList}\small\item\em Określa tryb rysowania realizowanego przez program {\ttfamily gnuplot}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}{Line\+Style}} \{ {\bfseries L\+S\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}, 
 {\bfseries L\+S\+\_\+\+S\+C\+A\+T\+T\+E\+R\+ED}
- \}\begin{DoxyCompactList}\small\item\em Sposób rysowania linii. \end{DoxyCompactList}
-\end{DoxyCompactItemize}
-\subsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{namespace_pz_g_a64a72627607d0c3f47a61d19744eebef}\label{namespace_pz_g_a64a72627607d0c3f47a61d19744eebef}} 
-bool {\bfseries File\+Exists} (char const $\ast$filename)
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{namespace_pz_g_a6d8d7783183a08d769e3c695cd35587f}\label{namespace_pz_g_a6d8d7783183a08d769e3c695cd35587f}} 
-const int {\bfseries L\+I\+N\+E\+\_\+\+L\+E\+N\+G\+TH} = 120
-\end{DoxyCompactItemize}
+ \}
+\begin{DoxyCompactList}\small\item\em Sposób rysowania linii. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 Moduł narzędzi umożliwiających połącznie z G\+N\+U\+Plotem. 
 
 Niniejsza przestrzeń nazw stanowi moduł logiczny zawierający narzędzia umożliwiające realizację połączenia z programem {\ttfamily gnuplot}. 
 
-\subsection{Enumeration Type Documentation}
+\doxysubsection{Enumeration Type Documentation}
 \mbox{\Hypertarget{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}\label{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}} 
-\index{PzG@{PzG}!Drawing\+Mode@{Drawing\+Mode}}
-\index{Drawing\+Mode@{Drawing\+Mode}!PzG@{PzG}}
-\subsubsection{\texorpdfstring{Drawing\+Mode}{DrawingMode}}
-{\footnotesize\ttfamily enum \hyperlink{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}{Pz\+G\+::\+Drawing\+Mode}}
+\index{PzG@{PzG}!DrawingMode@{DrawingMode}}
+\index{DrawingMode@{DrawingMode}!PzG@{PzG}}
+\doxysubsubsection{\texorpdfstring{DrawingMode}{DrawingMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pz_g_a4360c76a1dbf714a19a0d97fe56e0660}{Pz\+G\+::\+Drawing\+Mode}}}
 
 
 
@@ -56,10 +44,10 @@ Określa tryb rysowania realizowanego przez program {\ttfamily gnuplot}.
 Typ wyliczeniowy określające dopuszczalne tryby rysowania realizowanego przez program {\ttfamily gnuplot}. Wybór trybu wiąże się ze zmianą sposobu interpretacji danych zawartych pliku. Jeśli np. wybrany zostanie tryb 2D, to zakłada się, że w każdej linii pliku z danymi znajdują się wartości współrzędnych {\itshape x}, {\itshape y}. Wartości typu\+: \begin{DoxyItemize}
 \item {\ttfamily D\+M\+\_\+2D} -\/ rysowanie w trybie 2D, co sprowadza się do rysowania wykresów funkcji jednej zmiennej. \item {\ttfamily D\+M\+\_\+3D} -\/ rysowanie w trybie 3D. Oznacza to możliwość rysowania wykresów funkcji dwóch zmiennych. \end{DoxyItemize}
 \mbox{\Hypertarget{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}\label{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}} 
-\index{PzG@{PzG}!Line\+Style@{Line\+Style}}
-\index{Line\+Style@{Line\+Style}!PzG@{PzG}}
-\subsubsection{\texorpdfstring{Line\+Style}{LineStyle}}
-{\footnotesize\ttfamily enum \hyperlink{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}{Pz\+G\+::\+Line\+Style}}
+\index{PzG@{PzG}!LineStyle@{LineStyle}}
+\index{LineStyle@{LineStyle}!PzG@{PzG}}
+\doxysubsubsection{\texorpdfstring{LineStyle}{LineStyle}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_pz_g_ab0580cdb6bfe9e51d7de2588bc824076}{Pz\+G\+::\+Line\+Style}}}
 
 
 

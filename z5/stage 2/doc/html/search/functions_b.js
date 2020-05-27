@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ymax',['Ymax',['../class_pz_g_1_1_gnuplot_link.html#a7311b56e882f8bf334c1afbceb51a734',1,'PzG::GnuplotLink']]],
-  ['ymin',['Ymin',['../class_pz_g_1_1_gnuplot_link.html#a9a8112464c85c3a72723079c84446789',1,'PzG::GnuplotLink']]]
+  ['translate_187',['translate',['../class_drone.html#a359a920499a0a8ba00d649d202e4f224',1,'Drone::translate()'],['../class_shape.html#a87f2bd8b0e83a3d30cb94a13c150823f',1,'Shape::translate()']]]
 ];

@@ -1,0 +1,180 @@
+\hypertarget{class_drone}{}\doxysection{Drone Class Reference}
+\label{class_drone}\index{Drone@{Drone}}
+
+
+Modeluje pojęcie drona jako kadłub oraz dwa wirniki.  
+
+
+
+
+{\ttfamily \#include $<$Drone.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drone_ab692baa4be5c43b72990ce1b01bdc805}{Drone}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor obiektu \mbox{\hyperlink{class_drone}{Drone}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drone_a2baee33c5975e0dca0bdfc6960477ee7}{draw}} (std\+::string filename) const
+\begin{DoxyCompactList}\small\item\em Metoda draw \char`\"{}rysuje\char`\"{} do pliku punkty drona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drone_a9ed9dc33c0db64c3c96d217a14a005ba}{set\+Angle}} (double angle)
+\begin{DoxyCompactList}\small\item\em Ustawia kąt obrotu wszystkich obiektów składowych. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_drone_a62a210e19da05bd0da0acc557e807511}{get\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca ustawiony kąt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drone_a359a920499a0a8ba00d649d202e4f224}{translate}} (const \mbox{\hyperlink{class_vector}{Vector3D}} \&translation)
+\begin{DoxyCompactList}\small\item\em Ustawia wektor translacji drona. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector3D}} \mbox{\hyperlink{class_drone_af7d054e8784286fb8a51d2b3ab8ee135}{get\+Translation}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca wektor translacji. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_drone_a46c1b2baf4c60d8e12744c62b56ad644}{check\+Collisions}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy nie zderzy się z innym obiektem na scenie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drone_afe6d6eb461135fbf7959dd831f13300b}{move}} (\mbox{\hyperlink{class_pz_g_1_1_gnuplot_link}{Pz\+G\+::\+Gnuplot\+Link}} \&link, double angle, double lenght)
+\begin{DoxyCompactList}\small\item\em Przesuwa dron we wskazanym kierunku o określoną długość. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drone_a5b961bb5232d2bfd0bf4f885920fd2ea}{rotate}} (\mbox{\hyperlink{class_pz_g_1_1_gnuplot_link}{Pz\+G\+::\+Gnuplot\+Link}} \&link, double angle)
+\begin{DoxyCompactList}\small\item\em Obraca dron o wskazany kąt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Modeluje pojęcie drona jako kadłub oraz dwa wirniki. 
+
+Udostępnia interfejs do animowania ruchów oraz zmiany pozycji drona. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_drone_ab692baa4be5c43b72990ce1b01bdc805}\label{class_drone_ab692baa4be5c43b72990ce1b01bdc805}} 
+\index{Drone@{Drone}!Drone@{Drone}}
+\index{Drone@{Drone}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{Drone()}{Drone()}}
+{\footnotesize\ttfamily Drone\+::\+Drone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor obiektu \mbox{\hyperlink{class_drone}{Drone}}. 
+
+Inicjalizuje wszystkie obiekty składowe odpowiednimi wartościami. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_drone_a46c1b2baf4c60d8e12744c62b56ad644}\label{class_drone_a46c1b2baf4c60d8e12744c62b56ad644}} 
+\index{Drone@{Drone}!checkCollisions@{checkCollisions}}
+\index{checkCollisions@{checkCollisions}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{checkCollisions()}{checkCollisions()}}
+{\footnotesize\ttfamily bool Drone\+::check\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza, czy nie zderzy się z innym obiektem na scenie. 
+
+\begin{DoxyReturn}{Returns}
+true Dron się zderzy z innym obiektem. 
+
+false Dron się nie zderzy z innym obiektem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_drone_a2baee33c5975e0dca0bdfc6960477ee7}\label{class_drone_a2baee33c5975e0dca0bdfc6960477ee7}} 
+\index{Drone@{Drone}!draw@{draw}}
+\index{draw@{draw}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Drone\+::draw (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Metoda draw \char`\"{}rysuje\char`\"{} do pliku punkty drona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku do wypisania punktów drona. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_a62a210e19da05bd0da0acc557e807511}\label{class_drone_a62a210e19da05bd0da0acc557e807511}} 
+\index{Drone@{Drone}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily double Drone\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca ustawiony kąt. 
+
+\begin{DoxyReturn}{Returns}
+double Kąt, który ustawiono. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_drone_af7d054e8784286fb8a51d2b3ab8ee135}\label{class_drone_af7d054e8784286fb8a51d2b3ab8ee135}} 
+\index{Drone@{Drone}!getTranslation@{getTranslation}}
+\index{getTranslation@{getTranslation}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{getTranslation()}{getTranslation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector3D}} Drone\+::get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca wektor translacji. 
+
+\begin{DoxyReturn}{Returns}
+Vector3D Wektor translacji, który ustawiono. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_drone_afe6d6eb461135fbf7959dd831f13300b}\label{class_drone_afe6d6eb461135fbf7959dd831f13300b}} 
+\index{Drone@{Drone}!move@{move}}
+\index{move@{move}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Drone\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_gnuplot_link}{Pz\+G\+::\+Gnuplot\+Link}} \&}]{link,  }\item[{double}]{angle,  }\item[{double}]{lenght }\end{DoxyParamCaption})}
+
+
+
+Przesuwa dron we wskazanym kierunku o określoną długość. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & Link do Gnu\+Plota. \\
+\hline
+{\em angle} & Kąt unoszenia/opadania. \\
+\hline
+{\em lenght} & Długość, na jaką ma przesunąć się dron. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_a5b961bb5232d2bfd0bf4f885920fd2ea}\label{class_drone_a5b961bb5232d2bfd0bf4f885920fd2ea}} 
+\index{Drone@{Drone}!rotate@{rotate}}
+\index{rotate@{rotate}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Drone\+::rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_gnuplot_link}{Pz\+G\+::\+Gnuplot\+Link}} \&}]{link,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Obraca dron o wskazany kąt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & Link do Gnu\+Plota. \\
+\hline
+{\em angle} & Kąt obrotu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_a9ed9dc33c0db64c3c96d217a14a005ba}\label{class_drone_a9ed9dc33c0db64c3c96d217a14a005ba}} 
+\index{Drone@{Drone}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Drone\+::set\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Ustawia kąt obrotu wszystkich obiektów składowych. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Kąt obrotu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_a359a920499a0a8ba00d649d202e4f224}\label{class_drone_a359a920499a0a8ba00d649d202e4f224}} 
+\index{Drone@{Drone}!translate@{translate}}
+\index{translate@{translate}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Drone\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector3D}} \&}]{translation }\end{DoxyParamCaption})}
+
+
+
+Ustawia wektor translacji drona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & Wektor translacji. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/krzysiu/projects/z5/stage 2/prj/inc/Drone.\+hh\end{DoxyCompactItemize}

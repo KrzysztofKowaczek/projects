@@ -1,0 +1,185 @@
+\hypertarget{class_rotor}{}\doxysection{Rotor Class Reference}
+\label{class_rotor}\index{Rotor@{Rotor}}
+
+
+Modeluje pojęcie wirnika jako zbiór punktów w przestrzeni.  
+
+
+
+
+{\ttfamily \#include $<$Rotor.\+hh$>$}
+
+
+
+Inheritance diagram for Rotor\+:
+% FIG 0
+
+
+Collaboration diagram for Rotor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rotor_a7221a52190a5a11da3ab37d9d4bde217}{Rotor}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_rotor}{Rotor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotor_a6e2e5189ead149037d7c1bb948952019}{draw}} (std\+::string filename) const
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Rysuje\char`\"{} wirnik, wpisując punkty do pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotor_ad92503e5170420cb1539d0e675ef4973}{set\+Angle}} (double angle)
+\begin{DoxyCompactList}\small\item\em Ustawia kąt obrotu. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_rotor_a1095673d2e866482e9f9fc02488793f1}{get\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca ustawiony kąt obrotu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotor_aa8f437eef3034bc63147ec561a4e12b0}{set\+Rotation}} (double rotation)
+\begin{DoxyCompactList}\small\item\em Ustawia kąt rotacji (obrót wokół osi X). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_rotor_a67dfa85b73747e232f3bbdb7ba2d357a}{get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca kąt rotacji (obrót wokół osi X). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rotor_a6b5df8efddd7cb64e0f8e08d5d9cfa4e}{set\+Mount\+Point}} (const \mbox{\hyperlink{class_vector}{Vector3D}} \&mount\+Point)
+\begin{DoxyCompactList}\small\item\em Ustawia wektor przesunięcia względem kadłubu Drona. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector3D}} \mbox{\hyperlink{class_rotor_a366ef6d567e533665b6f774044143a8b}{get\+Mount\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca wektor przesunięcia względem kadłubu Drona. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_rotor_a3358327eef6284cbf13e430157ee367c}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Zwraca nazwę klasy \mbox{\hyperlink{class_rotor}{Rotor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Modeluje pojęcie wirnika jako zbiór punktów w przestrzeni. 
+
+Klasa ta jest zoptymalizowana pod kątem współpracy z klasą \mbox{\hyperlink{class_drone}{Drone}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rotor_a7221a52190a5a11da3ab37d9d4bde217}\label{class_rotor_a7221a52190a5a11da3ab37d9d4bde217}} 
+\index{Rotor@{Rotor}!Rotor@{Rotor}}
+\index{Rotor@{Rotor}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{Rotor()}{Rotor()}}
+{\footnotesize\ttfamily Rotor\+::\+Rotor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \mbox{\hyperlink{class_rotor}{Rotor}}. 
+
+Wczytuje z pliku k\+Rotor\+File model wirnika. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rotor_a6e2e5189ead149037d7c1bb948952019}\label{class_rotor_a6e2e5189ead149037d7c1bb948952019}} 
+\index{Rotor@{Rotor}!draw@{draw}}
+\index{draw@{draw}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Rotor\+::draw (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+\char`\"{}\+Rysuje\char`\"{} wirnik, wpisując punkty do pliku. 
+
+Punkty wpisuje na końcu pliku, ta metoda zoptymalizowana jest do pracy z obiektem \mbox{\hyperlink{class_cuboid}{Cuboid}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Plik, do którego ma wpisać punkty. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rotor_a1095673d2e866482e9f9fc02488793f1}\label{class_rotor_a1095673d2e866482e9f9fc02488793f1}} 
+\index{Rotor@{Rotor}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily double Rotor\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca ustawiony kąt obrotu. 
+
+\begin{DoxyReturn}{Returns}
+double Kąt obrotu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rotor_a366ef6d567e533665b6f774044143a8b}\label{class_rotor_a366ef6d567e533665b6f774044143a8b}} 
+\index{Rotor@{Rotor}!getMountPoint@{getMountPoint}}
+\index{getMountPoint@{getMountPoint}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{getMountPoint()}{getMountPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector3D}} Rotor\+::get\+Mount\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca wektor przesunięcia względem kadłubu Drona. 
+
+\begin{DoxyReturn}{Returns}
+Vector3D Wektor przesunięcia. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rotor_a3358327eef6284cbf13e430157ee367c}\label{class_rotor_a3358327eef6284cbf13e430157ee367c}} 
+\index{Rotor@{Rotor}!getName@{getName}}
+\index{getName@{getName}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string Rotor\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Zwraca nazwę klasy \mbox{\hyperlink{class_rotor}{Rotor}}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Nazwa klasy. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a7030f5277276ba848cb71c661464511f}{Shape}}.
+
+\mbox{\Hypertarget{class_rotor_a67dfa85b73747e232f3bbdb7ba2d357a}\label{class_rotor_a67dfa85b73747e232f3bbdb7ba2d357a}} 
+\index{Rotor@{Rotor}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily double Rotor\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca kąt rotacji (obrót wokół osi X). 
+
+\begin{DoxyReturn}{Returns}
+double Kąt rotacji. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rotor_ad92503e5170420cb1539d0e675ef4973}\label{class_rotor_ad92503e5170420cb1539d0e675ef4973}} 
+\index{Rotor@{Rotor}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Rotor\+::set\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Ustawia kąt obrotu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Kąt obrotu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rotor_a6b5df8efddd7cb64e0f8e08d5d9cfa4e}\label{class_rotor_a6b5df8efddd7cb64e0f8e08d5d9cfa4e}} 
+\index{Rotor@{Rotor}!setMountPoint@{setMountPoint}}
+\index{setMountPoint@{setMountPoint}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{setMountPoint()}{setMountPoint()}}
+{\footnotesize\ttfamily void Rotor\+::set\+Mount\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector3D}} \&}]{mount\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ustawia wektor przesunięcia względem kadłubu Drona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mount\+Point} & Wektor przesunięcia. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rotor_aa8f437eef3034bc63147ec561a4e12b0}\label{class_rotor_aa8f437eef3034bc63147ec561a4e12b0}} 
+\index{Rotor@{Rotor}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Rotor@{Rotor}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Rotor\+::set\+Rotation (\begin{DoxyParamCaption}\item[{double}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Ustawia kąt rotacji (obrót wokół osi X). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & Kąt rotacji. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/krzysiu/projects/z5/stage 2/prj/inc/Rotor.\+hh\end{DoxyCompactItemize}
