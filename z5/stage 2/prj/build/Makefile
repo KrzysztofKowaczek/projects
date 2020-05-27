@@ -231,59 +231,32 @@ src/Rotor.cpp.s:
 	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Rotor.cpp.s
 .PHONY : src/Rotor.cpp.s
 
-src/Shape.o: src/Shape.cpp.o
+src/Scene.o: src/Scene.cpp.o
 
-.PHONY : src/Shape.o
-
-# target to build an object file
-src/Shape.cpp.o:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.o
-.PHONY : src/Shape.cpp.o
-
-src/Shape.i: src/Shape.cpp.i
-
-.PHONY : src/Shape.i
-
-# target to preprocess a source file
-src/Shape.cpp.i:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.i
-.PHONY : src/Shape.cpp.i
-
-src/Shape.s: src/Shape.cpp.s
-
-.PHONY : src/Shape.s
-
-# target to generate assembly for a file
-src/Shape.cpp.s:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Shape.cpp.s
-.PHONY : src/Shape.cpp.s
-
-src/animation.o: src/animation.cpp.o
-
-.PHONY : src/animation.o
+.PHONY : src/Scene.o
 
 # target to build an object file
-src/animation.cpp.o:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.o
-.PHONY : src/animation.cpp.o
+src/Scene.cpp.o:
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Scene.cpp.o
+.PHONY : src/Scene.cpp.o
 
-src/animation.i: src/animation.cpp.i
+src/Scene.i: src/Scene.cpp.i
 
-.PHONY : src/animation.i
+.PHONY : src/Scene.i
 
 # target to preprocess a source file
-src/animation.cpp.i:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.i
-.PHONY : src/animation.cpp.i
+src/Scene.cpp.i:
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Scene.cpp.i
+.PHONY : src/Scene.cpp.i
 
-src/animation.s: src/animation.cpp.s
+src/Scene.s: src/Scene.cpp.s
 
-.PHONY : src/animation.s
+.PHONY : src/Scene.s
 
 # target to generate assembly for a file
-src/animation.cpp.s:
-	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/animation.cpp.s
-.PHONY : src/animation.cpp.s
+src/Scene.cpp.s:
+	$(MAKE) -f CMakeFiles/dron2.dir/build.make CMakeFiles/dron2.dir/src/Scene.cpp.s
+.PHONY : src/Scene.cpp.s
 
 src/gnuplot_link.o: src/gnuplot_link.cpp.o
 
@@ -360,12 +333,9 @@ help:
 	@echo "... src/Rotor.o"
 	@echo "... src/Rotor.i"
 	@echo "... src/Rotor.s"
-	@echo "... src/Shape.o"
-	@echo "... src/Shape.i"
-	@echo "... src/Shape.s"
-	@echo "... src/animation.o"
-	@echo "... src/animation.i"
-	@echo "... src/animation.s"
+	@echo "... src/Scene.o"
+	@echo "... src/Scene.i"
+	@echo "... src/Scene.s"
 	@echo "... src/gnuplot_link.o"
 	@echo "... src/gnuplot_link.i"
 	@echo "... src/gnuplot_link.s"

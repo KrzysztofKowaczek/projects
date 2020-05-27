@@ -1,3 +1,0 @@
-/home/krzysiu/projects/z5/stage 1/prj/CMakeFiles/edit_cache.dir
-/home/krzysiu/projects/z5/stage 1/prj/CMakeFiles/rebuild_cache.dir
-/home/krzysiu/projects/z5/stage 1/prj/CMakeFiles/dron1.dir

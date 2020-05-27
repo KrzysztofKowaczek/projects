@@ -44,6 +44,7 @@ void Rotor::draw(std::string filename) const
         outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
 
     outputFile << "#\n";
+    outputFile.close();
 }
 
 Rotor::Rotor(): _angle(0), _rotation(0)
@@ -62,4 +63,22 @@ Rotor::Rotor(): _angle(0), _rotation(0)
         _points.push_back(point);
     }
     inputFile.close();
+}
+
+void Rotor::setAngle(double angle) 
+{
+    _angle = angle; 
+    while(_angle > 360) 
+        _angle -= 360;
+    while(_angle < 0)
+        _angle += 360;
+}
+
+void Rotor::setRotation(double rotation)
+{
+    _rotation = rotation; 
+    while(_rotation > 360) 
+        _rotation -= 360;
+    while(_rotation < 0)
+        _rotation += 360;
 }

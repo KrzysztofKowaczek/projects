@@ -12,9 +12,11 @@ CMakeFiles/dron2.dir/src/Drone.cpp.o
  ../inc/Drone.hh
  ../inc/Matrix.hh
  ../inc/Rotor.hh
+ ../inc/Scene.hh
  ../inc/Shape.hh
  ../inc/Vector.hh
  ../inc/filenames.hh
+ ../inc/gnuplot_link.hh
  /home/krzysiu/projects/z5/stage 2/prj/src/Drone.cpp
 CMakeFiles/dron2.dir/src/Matrix.cpp.o
  ../inc/Matrix.hh
@@ -27,21 +29,15 @@ CMakeFiles/dron2.dir/src/Rotor.cpp.o
  ../inc/Vector.hh
  ../inc/filenames.hh
  /home/krzysiu/projects/z5/stage 2/prj/src/Rotor.cpp
-CMakeFiles/dron2.dir/src/Shape.cpp.o
- ../inc/Matrix.hh
- ../inc/Shape.hh
- ../inc/Vector.hh
- /home/krzysiu/projects/z5/stage 2/prj/src/Shape.cpp
-CMakeFiles/dron2.dir/src/animation.cpp.o
+CMakeFiles/dron2.dir/src/Scene.cpp.o
  ../inc/Cuboid.hh
- ../inc/Drone.hh
  ../inc/Matrix.hh
- ../inc/Rotor.hh
+ ../inc/Objects.hh
+ ../inc/Scene.hh
  ../inc/Shape.hh
  ../inc/Vector.hh
  ../inc/filenames.hh
- ../inc/gnuplot_link.hh
- /home/krzysiu/projects/z5/stage 2/prj/src/animation.cpp
+ /home/krzysiu/projects/z5/stage 2/prj/src/Scene.cpp
 CMakeFiles/dron2.dir/src/gnuplot_link.cpp.o
  ../inc/gnuplot_link.hh
  /home/krzysiu/projects/z5/stage 2/prj/src/gnuplot_link.cpp
@@ -49,10 +45,11 @@ CMakeFiles/dron2.dir/src/main.cpp.o
  ../inc/Cuboid.hh
  ../inc/Drone.hh
  ../inc/Matrix.hh
+ ../inc/Objects.hh
  ../inc/Rotor.hh
+ ../inc/Scene.hh
  ../inc/Shape.hh
  ../inc/Vector.hh
- ../inc/animation.hh
  ../inc/filenames.hh
  ../inc/gnuplot_link.hh
  /home/krzysiu/projects/z5/stage 2/prj/src/main.cpp

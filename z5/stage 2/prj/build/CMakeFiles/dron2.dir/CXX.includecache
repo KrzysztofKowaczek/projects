@@ -24,12 +24,46 @@ Vector.hh
 Matrix.hh
 ../inc/Matrix.hh
 
+../inc/Drone.hh
+string
+-
+Scene.hh
+../inc/Scene.hh
+Vector.hh
+../inc/Vector.hh
+Shape.hh
+../inc/Shape.hh
+Cuboid.hh
+../inc/Cuboid.hh
+Rotor.hh
+../inc/Rotor.hh
+filenames.hh
+../inc/filenames.hh
+gnuplot_link.hh
+../inc/gnuplot_link.hh
+
 ../inc/Matrix.hh
 Vector.hh
 ../inc/Vector.hh
 iostream
 -
 cmath
+-
+
+../inc/Rotor.hh
+string
+-
+Shape.hh
+../inc/Shape.hh
+Vector.hh
+../inc/Vector.hh
+
+../inc/Scene.hh
+Shape.hh
+../inc/Shape.hh
+memory
+-
+vector
 -
 
 ../inc/Shape.hh
@@ -46,17 +80,27 @@ Matrix.hh
 iostream
 -
 
-/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.cpp
-Cuboid.hh
-/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.hh
-vector
--
-fstream
--
-iostream
--
+../inc/filenames.hh
 string
 -
-cmath
+
+../inc/gnuplot_link.hh
+string
+-
+list
+-
+vector
+-
+
+/home/krzysiu/projects/z5/stage 2/prj/src/Drone.cpp
+Drone.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Drone.hh
+Vector.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Vector.hh
+vector
+-
+chrono
+-
+thread
 -
 

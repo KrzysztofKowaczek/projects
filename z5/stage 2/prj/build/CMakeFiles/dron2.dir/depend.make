@@ -11,9 +11,11 @@ CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Cuboid.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Drone.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Matrix.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Rotor.hh
+CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Scene.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/filenames.hh
+CMakeFiles/dron2.dir/src/Drone.cpp.o: ../inc/gnuplot_link.hh
 CMakeFiles/dron2.dir/src/Drone.cpp.o: ../src/Drone.cpp
 
 CMakeFiles/dron2.dir/src/Matrix.cpp.o: ../inc/Matrix.hh
@@ -27,20 +29,14 @@ CMakeFiles/dron2.dir/src/Rotor.cpp.o: ../inc/Vector.hh
 CMakeFiles/dron2.dir/src/Rotor.cpp.o: ../inc/filenames.hh
 CMakeFiles/dron2.dir/src/Rotor.cpp.o: ../src/Rotor.cpp
 
-CMakeFiles/dron2.dir/src/Shape.cpp.o: ../inc/Matrix.hh
-CMakeFiles/dron2.dir/src/Shape.cpp.o: ../inc/Shape.hh
-CMakeFiles/dron2.dir/src/Shape.cpp.o: ../inc/Vector.hh
-CMakeFiles/dron2.dir/src/Shape.cpp.o: ../src/Shape.cpp
-
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Cuboid.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Drone.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Matrix.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Rotor.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Shape.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/Vector.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/filenames.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../inc/gnuplot_link.hh
-CMakeFiles/dron2.dir/src/animation.cpp.o: ../src/animation.cpp
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Cuboid.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Objects.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Scene.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Shape.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/Vector.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../inc/filenames.hh
+CMakeFiles/dron2.dir/src/Scene.cpp.o: ../src/Scene.cpp
 
 CMakeFiles/dron2.dir/src/gnuplot_link.cpp.o: ../inc/gnuplot_link.hh
 CMakeFiles/dron2.dir/src/gnuplot_link.cpp.o: ../src/gnuplot_link.cpp
@@ -48,10 +44,11 @@ CMakeFiles/dron2.dir/src/gnuplot_link.cpp.o: ../src/gnuplot_link.cpp
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Cuboid.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Drone.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Matrix.hh
+CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Objects.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Rotor.hh
+CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Scene.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Shape.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/Vector.hh
-CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/animation.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/filenames.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../inc/gnuplot_link.hh
 CMakeFiles/dron2.dir/src/main.cpp.o: ../src/main.cpp

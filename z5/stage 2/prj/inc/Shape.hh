@@ -31,21 +31,15 @@ public:
      */
     Vector3D getTranslation() const {return _translation;}
     /**
-     * @brief Konstruktor klasy Shape.
+     * @brief Zwraca przechowywane punkty.
      * 
-     * Wczytuje z pliku współrzędne bryły.
-     * 
-     * @param filename Nazwa pliku ze współrzędnymi.
+     * @return std::vector<Vector3D> Lista punktów.
      */
-    Shape(std::string filename);
+    std::vector<Vector3D> getPoints() const {return _points;}
     /**
-     * @brief Konstruktor bezparametryczny klasy Shape.
+     * @brief Metoda wirtualna do zwracania nazwy obiektu.
      * 
-     * Nic nie inicjalizuje, po prostu sobie jest.
+     * @return std::string Nazwa obiektu.
      */
-    Shape() {}
-
-    virtual void draw(std::string filename) const = 0;
     virtual std::string getName() const = 0;
-    virtual ~Shape() {}
 };

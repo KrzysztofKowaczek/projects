@@ -36,8 +36,7 @@ public:
      * 
      * @param angle Kąt obrotu względem osi Z.
      */
-    void setAngle(double angle) 
-            {_angle = angle; while(_angle > 360) _angle -= 360;}
+    void setAngle(double angle);
     /**
      * @brief Zwraca kąt obrotu prostopadłościanu względem osi Z.
      * 
@@ -52,6 +51,6 @@ public:
      * 
      * @param filename Nazwa pliku, do którego mają zostać wpisane punkty.
      */
-    virtual void draw(std::string filename) const override;
+    void draw(std::string filename) const;
     virtual std::string getName() const override {return "prostopadloscian";}
 };

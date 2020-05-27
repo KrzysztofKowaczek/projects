@@ -28,8 +28,17 @@ void Cuboid::draw(std::string filename) const
             outputFile << "#\n\n";
         }
     }
+    outputFile.close();
 }
 
+void Cuboid::setAngle(double angle) 
+{
+    _angle = angle;
+    while(_angle > 360) 
+        _angle -= 360;
+    while(_angle < 0)
+        _angle += 360;
+}
 Cuboid::Cuboid(): _angle{0}
 {
     ifstream inputFile;
@@ -61,14 +70,17 @@ Cuboid::Cuboid(std::string filename): _angle{0}
     }
 
     Vector3D point;
+    std::string str;
     while(!inputFile.fail())
     {
-        if(inputFile.peek() == '#')
-            inputFile.ignore(10000, '\n');
+        inputFile >> str;
+        if(str[0] != '#')  
+            for(signed i = str.length(); i > 0; --i)
+                inputFile.putback(str[i - 1]);
         
         if(inputFile >> point)
             _points.push_back(point);
-        
+            
     }
     inputFile.close();
 }
