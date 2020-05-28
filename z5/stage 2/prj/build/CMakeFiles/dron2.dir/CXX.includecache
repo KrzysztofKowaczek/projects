@@ -50,6 +50,12 @@ iostream
 cmath
 -
 
+../inc/Objects.hh
+Shape.hh
+../inc/Shape.hh
+string
+-
+
 ../inc/Rotor.hh
 string
 -
@@ -92,6 +98,20 @@ list
 vector
 -
 
+/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.cpp
+Cuboid.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.hh
+vector
+-
+fstream
+-
+iostream
+-
+string
+-
+cmath
+-
+
 /home/krzysiu/projects/z5/stage 2/prj/src/Drone.cpp
 Drone.hh
 /home/krzysiu/projects/z5/stage 2/prj/src/Drone.hh
@@ -103,4 +123,56 @@ chrono
 -
 thread
 -
+
+/home/krzysiu/projects/z5/stage 2/prj/src/Rotor.cpp
+fstream
+-
+iostream
+-
+Rotor.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Rotor.hh
+Vector.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Vector.hh
+filenames.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/filenames.hh
+
+/home/krzysiu/projects/z5/stage 2/prj/src/Scene.cpp
+Scene.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Scene.hh
+Cuboid.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.hh
+Objects.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Objects.hh
+filenames.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/filenames.hh
+memory
+-
+
+/home/krzysiu/projects/z5/stage 2/prj/src/main.cpp
+iostream
+-
+iomanip
+-
+fstream
+-
+string
+-
+cmath
+-
+memory
+-
+gnuplot_link.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/gnuplot_link.hh
+Drone.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Drone.hh
+Cuboid.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Cuboid.hh
+Vector.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Vector.hh
+Matrix.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Matrix.hh
+Objects.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/Objects.hh
+filenames.hh
+/home/krzysiu/projects/z5/stage 2/prj/src/filenames.hh
 

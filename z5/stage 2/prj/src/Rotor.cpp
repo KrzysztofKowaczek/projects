@@ -10,12 +10,12 @@ using namespace std;
 void Rotor::draw(std::string filename) const
 {
     Vector3D location;
-    Matrix3D matrixX, matrixZ;
+    Matrix3D matrixY, matrixZ;
     ofstream outputFile;
     unsigned i;
     outputFile.open(filename, ios_base::app);
     matrixZ.rotationZ(_angle);
-    matrixX.rotationX(_rotation);
+    matrixY.rotationY(_rotation);
     location = matrixZ * _mountPoint + _translation;  
     if(!outputFile.is_open())
     {
@@ -25,23 +25,23 @@ void Rotor::draw(std::string filename) const
 
     outputFile << endl << endl;
     for(i = 0; i < 7; ++i)
-        outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
+        outputFile << matrixZ * (matrixY * _points[i]) + location << endl;
 
     outputFile << "#\n\n";
     for(; i < 14; ++i)
-        outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
+        outputFile << matrixZ * (matrixY * _points[i]) + location << endl;
 
     outputFile << "#\n\n\n"; 
     for(; i < 19;  ++i)
-        outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
+        outputFile << matrixZ * (matrixY * _points[i]) + location << endl;
 
     outputFile << "#\n\n\n";
     for(; i < 23; ++i)
-        outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
+        outputFile << matrixZ * (matrixY * _points[i]) + location << endl;
 
     outputFile << "#\n\n\n";
     for(; i < 27; ++i)
-        outputFile << matrixZ * (matrixX * _points[i]) + location << endl;
+        outputFile << matrixZ * (matrixY * _points[i]) + location << endl;
 
     outputFile << "#\n";
     outputFile.close();
